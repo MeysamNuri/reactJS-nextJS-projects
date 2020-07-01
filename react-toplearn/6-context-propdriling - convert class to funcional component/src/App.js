@@ -33,7 +33,7 @@ const App = () => {
 
     const handleNameChange = (event, id) => {
 
-        const { persons } = getPersons
+        const  persons  = getPersons
         const personIndex = persons.findIndex(item => item.id === id)
         const person = persons[personIndex]
         person.fullname = event.target.value
