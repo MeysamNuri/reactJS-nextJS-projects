@@ -5,7 +5,7 @@ import SimpleReactValidator from 'simple-react-validator'
 import { Sugar } from "react-preloaders";
 import { Helmet } from "react-helmet";
 const Register = ({history}) => {
-    const [fullName, setFullName] = useState("")
+    const [fullname, setFullName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState('')
     const [policy, setPolicy] = useState();
@@ -32,7 +32,7 @@ const Register = ({history}) => {
     const formHandler = async event => {
         event.preventDefault()
         const user = {
-            fullName,
+            fullname,
             password,
             email
         }
@@ -91,13 +91,13 @@ const Register = ({history}) => {
                                 className="form-control"
                                 placeholder="نام و نام خانوادگی"
                                 aria-describedby="username"
-                                value={fullName}
+                                value={fullname}
                                 onChange={e => {
                                     setFullName(e.target.value)
                                     validator.current.showMessageFor("fullname")
                                 }}
                             />
-                            {validator.current.message("fullname", fullName, "required|min:5")}
+                            {validator.current.message("fullname", fullname, "required|min:5")}
                         </div>
 
                         <div className="input-group">

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { registerUser } from './../../services/userconfig'
 const Register = () => {
-    const [fullName, setFullName] = useState("")
+    const [fullname, setFullName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState('')
     const resetfield = e => {
@@ -14,7 +14,7 @@ const Register = () => {
     const formHandler = async event => {
         event.preventDefault()
         const user = {
-            fullName,
+            fullname,
             password,
             email
         }
@@ -57,7 +57,7 @@ const Register = () => {
                                 className="form-control"
                                 placeholder="نام و نام خانوادگی"
                                 aria-describedby="username"
-                                value={fullName}
+                                value={fullname}
                                 onChange={e => setFullName(e.target.value)}
                             />
                         </div>
