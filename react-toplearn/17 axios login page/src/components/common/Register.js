@@ -57,7 +57,7 @@ const Register = () => {
                                 className="form-control"
                                 placeholder="نام و نام خانوادگی"
                                 aria-describedby="username"
-                                value={fullname}
+                                value={fullname }
                                 onChange={e => setFullName(e.target.value)}
                             />
                         </div>
