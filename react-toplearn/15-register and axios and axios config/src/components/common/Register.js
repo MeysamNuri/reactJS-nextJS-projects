@@ -3,7 +3,7 @@ import axios from 'axios'
 import { toast } from "react-toastify";
 
 const Register = () => {
-    const [fullName,setFullName]=useState("")
+    const [fullname,setFullName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState('')
 const resetfield= e =>{
@@ -15,7 +15,7 @@ const resetfield= e =>{
     const formHandler= e =>{
         e.preventDefault()
         const user={
-            fullName,
+            fullname,
             password,
             email
         }
@@ -67,7 +67,7 @@ const resetfield= e =>{
                                 className="form-control"
                                 placeholder="نام و نام خانوادگی"
                                 aria-describedby="username"
-                                value={fullName}
+                                value={fullname}
                                 onChange={e => setFullName(e.target.value)}
                             />
                         </div>
