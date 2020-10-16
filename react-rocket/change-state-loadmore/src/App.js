@@ -22,7 +22,7 @@ function App() {
 //  }, 3000);
 
  const loadMore=()=>{
-   let articles=
+   let myarticles=
    [
       {id:'4',title:"article 4",body:"this is article 4"},
       {id:'5',title:"article 5",body:"this is article 5"},
@@ -30,11 +30,11 @@ function App() {
     ]
 
   //  setText({
-  //    articles: [...text.articles, ...articles]
+  //    articles: [...text.articles, ...myarticles]
   //  })
   setText(prevstate=>{
     return {
-      articles:[...prevstate.articles,...articles]
+      articles:[...prevstate.articles,...myarticles]
     }
   })
  }
