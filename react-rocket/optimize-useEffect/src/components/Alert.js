@@ -67,7 +67,7 @@ function AlertComponent(props) {
 
     useEffect(() => {
         console.log('[Alert.js] run useEffect')
-    })
+    },[props.show])
 
     useEffect(() => {
         console.log('[Alert.js] run useEffect as mounting')

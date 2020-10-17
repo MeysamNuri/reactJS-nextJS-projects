@@ -37,7 +37,7 @@ function CardItem(props) {
     useEffect(() => {
         console.log('[Card.js] run useEffect')
 
-    })
+    },[props.article])
 
     useEffect(() => {
         console.log('[Card.js] run useEffect as mounting')
