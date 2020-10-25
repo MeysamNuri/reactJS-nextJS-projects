@@ -14,6 +14,13 @@ class App extends Component {
     };
 
     handleDeletePerson = id => {
+           // this.setState(prevstate => {
+        //     return {
+        //         ...prevstate.persons,
+        //         persons: prevstate.persons.filter(item => item.id !== personId)
+        //     }
+        // })
+        
         //filter
         const persons = [...this.state.persons];
         const filteredPersons = persons.filter(p => p.id !== id); //! = =
