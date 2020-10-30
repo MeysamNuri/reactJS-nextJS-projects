@@ -15,7 +15,7 @@ const ShowTodo = (props) => {
         axios.delete(`https://react-course2.firebaseio.com/todos/${item.key}.json`)
         .then(response=> todoscontext.dispatch({type:"DELETE_TODO",payload:{key:item.key}}))
         .catch(err=>console.log(err))
-        todoscontext.dispatch({type:"DELETE_TODO",payload:{key:item.key}})
+ 
     }
     let doneHandler=(e)=>{
        todoscontext.dispatch({type:"DONE_TODO",payload:{key:item.key}})
