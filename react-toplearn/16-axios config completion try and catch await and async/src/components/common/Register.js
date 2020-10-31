@@ -38,6 +38,35 @@ const Register = () => {
             });
             console.log(ex);
         }
+
+          //   axios
+    //   .post(
+    //       "https://toplearnapi.ghorbany.dev/api/register",
+    //       JSON.stringify(user),
+    //       {
+    //           headers: {
+    //               "Content-Type": "application/json"
+    //           }
+    //       }
+    //   )
+    //   .then(({ data, status }) => {
+    //       if (status === 201) {
+    //           toast.success("کاربر با موفقیت ساخته شد.", {
+    //               position: "top-right",
+    //               closeOnClick: true
+    //           });
+    //           console.log(data);
+    //           reset();
+    //       }
+    //   })
+    //   .catch(ex => {
+    //       toast.error("مشکلی پیش آمده.", {
+    //           position: "top-right",
+    //           closeOnClick: true
+    //       });
+    //       console.log(ex);
+    //   });
+      
     }
     return (
         <main className="client-page">
