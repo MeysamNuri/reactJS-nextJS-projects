@@ -5,3 +5,4 @@ helmet
 toastify
 simple-react-validator
 redux-thunk
+react-lazy-image-load
