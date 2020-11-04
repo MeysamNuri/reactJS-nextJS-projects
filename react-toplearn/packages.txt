@@ -1,0 +1,7 @@
+jsonwebtoken
+react-redux-loading-bar
+lodash
+helmet
+toastify
+simple-react-validator
+redux-thunk
