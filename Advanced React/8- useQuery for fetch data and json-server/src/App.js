@@ -14,7 +14,7 @@ const App = () => {
   const [addNewTasks]=useMutation(()=>addTodoApi(newTask),{
       onSuccess:(data)=>{
         console.log("on success post data", data);
-        queryCache.invalidateQueries("http://localhost:3000/tasks")
+        queryCache.invalidateQueries(`http://localhost:3000/tasks?done=${done}`)
       }
     })
     const addMyTask=()=>{
