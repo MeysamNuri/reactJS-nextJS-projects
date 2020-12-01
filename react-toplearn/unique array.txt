@@ -1,0 +1,4 @@
+const arr = [1, 2, 'a', 'b', 2, 'a', 3, 4];
+const uniqueArr = [...new Set(arr)];
+
+console.log(uniqueArr); // [1, 2, "a", "b", 3, 4]
