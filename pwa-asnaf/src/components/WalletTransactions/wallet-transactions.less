@@ -1,0 +1,54 @@
+.transaction-list {
+  overflow-y: scroll;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+
+  .transaction-item-div {
+    width: 85%;
+    background-color: #fff;
+    box-shadow: 0 3px 15px #0000000d;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    position: relative;
+
+    .transaction-amount {
+      direction: ltr;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .withdraw-transaction {
+      display: flex;
+      flex-direction: column;
+      float: left;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 5px;
+        justify-content: center;
+
+        p {
+          color: #009b7f;
+        }
+      }
+      > span {
+        background-color: #4285f4;
+        border-radius: 4px;
+        color: #fff;
+        height: 20px;
+        padding: 0 5px;
+        margin-bottom: 5px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

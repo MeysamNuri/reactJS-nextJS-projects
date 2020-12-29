@@ -1,0 +1,93 @@
+
+.List-loan-box{
+    background-color: white;
+    direction: rtl;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .list-loan-title{
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 10px);
+  margin-right: 12px;
+  padding-bottom: 6px;
+  
+  }
+  .list-loan-title{
+    text-align: right;
+  }
+  .list-loan-title span{
+    color: #C2CDD9;
+    font-size: 12px 
+  }
+  .list-loan-title div{
+    width: 100%;
+  }
+  .list-loan-title p{
+    font-weight: bolder;
+    margin-bottom: 0px !important;
+    font-size: 13px;
+  }
+  .des-Title{
+    color: #C2CDD9;
+    font-size: 12px;
+    text-align: right
+  }
+  .description{
+    font-size: 12px;
+
+    text-align: justify;
+  }
+  .counter-titr{
+    font-weight: bolder;
+    font-size: 16px;
+    margin-bottom: 0px
+  }
+  .installment{
+    color: #F1429F;
+    padding-bottom: 20px;
+  }
+  .installment span{
+    font-weight: bolder;
+    font-size: 18px;
+   
+  }
+  .circle-style{
+    background-color: hsla(328, 86%, 60%, 1);
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+  .list-waiting-style{
+    color: hsla(42, 96%, 61%, 1);
+    font-size: 13px;
+    font-weight: 100 !important;
+  }
+  .list-waiting-style-active{
+    color: hsla(169, 100%, 30%, 1);
+  }
+
+  .font-style{
+    font-weight: bolder;
+  }
+  .parent_container{
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .List-Loan-footer{
+      padding: 0px 12px;
+  }
+  .payed-color{
+    color: #6498E6;
+  }
+.items-style{
+  margin-bottom: 7px;
+}

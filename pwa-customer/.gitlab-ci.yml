@@ -1,0 +1,21 @@
+variables: 
+  SERVICE_NAME: customer-pwa
+
+stages: 
+  - deploy_to_dev
+  - deploy_to_master 
+ 
+Deploy to Dev: 
+  stage: deploy_to_dev 
+  script:
+    - ssh test-app 'cd /var/www/project/customer-pwa/; git pull origin dev; yarn; cp webpack.config.js node_modules/react-scripts/config/; yarn build' 
+  only:
+    - dev
+    
+#Deploy to Master: 
+#  stage: deploy_to_master
+#  script:
+#    - ssh soroush-app 'cd /var/www/project/customer-pwa/; git pull origin master; yarn; yarn build'
+#
+#  only:
+#    - master

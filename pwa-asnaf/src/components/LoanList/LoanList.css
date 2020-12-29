@@ -1,0 +1,99 @@
+.ListLoanComponents {
+  margin-top: 3vh;
+}
+.loan_list {
+  width: calc(100% - 10vw);
+  margin-right: 5vw;
+  margin-bottom: 2.5vh;
+}
+.List-loan-box {
+  background-color: white;
+  width: 100%;
+  direction: rtl;
+  height: auto;
+  border-radius: 8px;
+  
+  position: relative;
+}
+
+.list-loan-title {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 10px);
+  margin-right: 12px;
+  padding-bottom: 6px;
+}
+.list-loan-title {
+  text-align: right;
+}
+.list-loan-title span {
+  color: #c2cdd9;
+  font-size: 12px;
+}
+.list-loan-title div {
+  width: 100%;
+}
+.list-loan-title p {
+  font-weight: bolder;
+  margin-bottom: 0px !important;
+  font-size: 13px;
+}
+.des-Title {
+  color: #c2cdd9;
+  font-size: 12px;
+  text-align: right;
+}
+.description {
+  font-size: 12px;
+
+  text-align: justify;
+}
+.counter-titr {
+  font-weight: bolder;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.installment {
+  color: #f1429f;
+  padding-bottom: 20px;
+}
+.installment span {
+  font-weight: bolder;
+  font-size: 18px;
+}
+.circle-style {
+  background-color: hsla(328, 86%, 60%, 1);
+  width: 5px;
+  height: 5px;
+  border-radius: 4px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.list-waiting-style {
+  color: hsla(42, 96%, 61%, 1);
+  font-size: 13px;
+  font-weight: 100 !important;
+}
+.list-waiting-style-active {
+  color: hsla(169, 100%, 30%, 1);
+}
+
+.font-style {
+  font-weight: bolder;
+}
+.parent_container {
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.List-Loan-footer {
+  padding: 0px 12px;
+}
+.payed-color {
+  color: #6498e6;
+}
+.items-style {
+  margin-bottom: 7px;
+}

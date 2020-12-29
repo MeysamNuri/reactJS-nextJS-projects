@@ -1,0 +1,122 @@
+.container-div {
+  background-color: #f6f9fc;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+
+  .empty_content {
+    width: 50%;
+    height: 100%;
+    margin-top: 24%;
+
+    .star {
+      width: 100%;
+      height: 52px;
+      margin-bottom: 5vh;
+
+      span {
+        background-image: url("/assets/images/star-line-through.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .browse_map {
+      margin-top: 15vh;
+      color: #c2cdd9;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .open_map {
+      color: #6498e6;
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+  .favorite_content {
+    width: 100%;
+    height: 91vh;
+    overflow-y: scroll;
+    padding-bottom: 30px;
+    -webkit-overflow-scrolling: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  .card_div {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin-top: 30px;
+    justify-content: center;
+
+    .card-favorites {
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0px 3px 15px #0000000d;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 20px;
+      .deactive-div {
+        background-color: #636363c2;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        p{
+          color: #fff;
+          margin-right: 8px;
+        }
+      }
+      .box-row {
+        flex-direction: row;
+        display: flex;
+
+        .image_icon {
+          width: 28px;
+          height: 28px;
+        }
+
+        .display-flex {
+          display: flex;
+
+          span:first-child {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

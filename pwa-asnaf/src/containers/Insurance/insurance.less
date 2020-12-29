@@ -1,0 +1,122 @@
+.insuranse {
+  width: 100%;
+  overflow-y: scroll;
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f9fc;
+
+  .insurance-tabs {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    direction: rtl;
+    text-align: center;
+    width: 100%;
+  }
+  .insurance-tabs p {
+    margin: 10px 0px;
+  }
+  .insurance-tab1 {
+    width: 50%;
+    cursor: pointer;
+    
+  }
+  .insurance-active {
+    border-bottom: 3px solid #08C573;
+    transition: 0.4s;
+  }
+  
+  .insurance-text-color {
+    color: #c2cdd9;
+    box-shadow: 0 3px 15px #0000000D;
+  }
+
+  .insuranse-top-txt {
+    background-color: #08c573;
+    box-shadow: 0 3px 15px #0000000d;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 25px 0 10px 0;
+    padding: 20px;
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+
+  .insurance-list {
+    width: 90%;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 3px 15px #0000000d;
+    margin-top: 10px;
+
+    .insurance-list-top {
+      background-color: #08c573 !important;
+      width: 100%;
+      color: #fff;
+      border-radius: 8px 8px 0 0;
+      padding: 12px 0;
+    }
+    .insurance-list-table {
+      width: 100%;
+
+      tr {
+        height: 40px;
+      }
+      td {
+        text-align: center;
+      }
+      tr:nth-child(odd) {
+        background-color: #08c57311;
+      }
+    }
+  }
+  .request-insurance-btn {
+    color: #fff;
+    width: 90%;
+    border-radius: 8px;
+    height: 48px;
+    background-color: #009b7f;
+    box-shadow: 0 3px 15px #0000000d;
+    margin-top: 35px;
+    font-size: 1.1rem;
+  }
+  .insurance-main-txt {
+    margin: 25px 0 50px 0;
+    width: 80%;
+    line-height: 30px;
+    text-align: justify;
+
+    .amount-txt {
+      color: #fff;
+      background-color: #08c573;
+      padding: 5px;
+      border-radius: 8px;
+    }
+  }
+  .request-timer {
+    background-color: #c2cdd9;
+    box-shadow: 0 3px 15px #0000000d;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+    margin-top: 25px;
+    width: 90%;
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+  }
+}

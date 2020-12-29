@@ -1,0 +1,84 @@
+.wallet {
+  display: flex;
+  width: 100%;
+  height: 87vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2vh;
+  background-color: #F6F9FC;
+
+  .page-content {
+    width: 85%;
+    margin: 2vh auto;
+
+    .wallet-amount {
+      background-color: #fff;
+      box-shadow: 0 3px 15px #0000000d;
+      border-radius: 8px;
+      width: 100%;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .amount {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        color: #6498e6;
+        margin-top: 5px;
+      }
+      .amount-btn {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 88%;
+
+        button {
+          width: 45%;
+          border-radius: 8px;
+          height: 36px;
+          font-size: 1rem;
+        }
+        .inc-btn {
+          background-color: #6498e6;
+          color: #fff;
+          box-shadow: 0 3px 15px #6498e633;
+          z-index: 10000;
+        }
+        .withdraw-btn {
+          border: 2px solid #6498e6;
+          background-color: transparent;
+          color: #6498e6;
+          z-index: 10000;
+        }
+      }
+    }
+  }
+  .wallet-progress {
+    margin-top: 15px;
+    width: 100%;
+    height: 25vh;
+
+    p {
+      font-size: 0.8rem;
+      padding-right: 26px;
+    }
+    h3 {
+      padding-right: 26px;
+    }
+    .wallet-progress-div {
+      background-color: #fff;
+      box-shadow: 0 3px 15px #0000000d;
+      width: 100%;
+      height: 100px;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

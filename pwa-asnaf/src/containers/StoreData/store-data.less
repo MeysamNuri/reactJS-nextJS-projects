@@ -1,0 +1,99 @@
+.store-data{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 90%;
+   padding: 25px 0;
+   margin: auto;
+   position: relative;
+
+   &::-webkit-scrollbar-track{
+     background: transparent;
+     width: 0;
+   }
+   &::-webkit-scrollbar{
+    background: transparent;
+    width: 0;
+   }
+   &::-webkit-scrollbar-thumb{
+    background: transparent;
+    width: 0;
+   }
+   .back-btn{
+     position: absolute;
+     top: 5%;
+     left: 5%;
+     transform: rotate(180deg);
+   }
+   h2{
+      margin: 35px 0;
+   }
+   .profile-form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 25px;
+   
+      .form-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 12px;
+   
+        >input {
+          width: 96%;
+          border-radius: 8px;
+          box-shadow: 0 3px 15px #0000000D;
+          height: 48px;
+          background: #FFFFFF;
+          padding-right: 10px;
+          padding-left: 10px;
+          font-size: 1.1rem;
+          outline: none;
+          text-align: left;
+        }
+        >p {
+          padding-right: 15px;
+          padding-bottom: 5px;
+          align-self: flex-start;
+          font-size: .8rem;
+        }
+        >span {
+          align-self: flex-end;
+          margin-top: 5px;
+          margin-left: 8px;
+        }
+        .e-add{
+         border: 1px solid #009B7F;
+         border-radius: 8px;
+         width: 32px;
+         align-self: flex-end;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 32px;
+         margin-left: 8px;
+         margin-top: 15px;
+        }
+        .map-div{
+          width: 320px;
+          height: 160px;
+          box-shadow: 0 3px 15px #87AFEB66;
+          border-radius: 8px;
+          border: 2px solid #fff;
+        }
+        .store-textarea{
+          border: none;
+          width: 320px;
+          height: 90px;
+          box-shadow: 0 3px 15px #0000000D;
+          border-radius: 8px;
+          padding: 15px;
+          outline: 0;
+        }
+      }
+    }
+}

@@ -1,0 +1,154 @@
+.store_container {
+  height: 100vh;
+  background: #f6f9fc;
+
+  .store-detail {
+    overflow-y: scroll;
+    height: 87vh;
+    padding: 2vh 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .theater {
+      width: 17vw;
+      height: 17vw;
+      max-height: 52px;
+      display: flex;
+      justify-content: center;
+
+      .background {
+        width: 85%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        border-radius: 50%;
+
+        img {
+          max-width: 62px;
+          max-height: 62px;
+          width: 11vw;
+          height: 11vw;
+          border-radius: 50%;
+          z-index: 1;
+          background-repeat: no-repeat;
+          background-size: 40px;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 12px;
+      margin-top: 2vh;
+
+      .description {
+        max-width: calc(100% - 54px);
+        color: #19212e;
+      }
+
+      .hr {
+        width: 60%;
+        height: 1px;
+        background: #ccc;
+        margin: 4px 0px 4px;
+      }
+      .store-address {
+        color: #c2cdd9;
+        width: 80%;
+        text-align: center;
+      }
+      .card_number {
+        color: #19212e;
+        margin: 0.5vh 0 2vh;
+      }
+
+      .purchase_history {
+        width: 160px;
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #009b7f;
+        border-radius: 15px;
+        color: #009b7f;
+        font-size: 12px;
+        font-weight: 600;
+        background: white;
+        cursor: pointer;
+      }
+
+      .off_logo {
+        width: 6vh;
+        height: 6vh;
+        margin: 3vh 0 1vh;
+        background-color: #d0332c;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          background-image: url(/assets/images/percentage.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 3vh;
+          height: 3vh;
+        }
+      }
+
+      .off_title {
+        color: #d0332c;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .off_description {
+        color: #d0332c;
+        font-weight: 600;
+        margin-bottom: 1.5vh;
+      }
+    }
+  }
+}
+.store-marker {
+  background: none;
+  border: none;
+  position: relative;
+  outline: none;
+  img {
+    width: 40px;
+  }
+}
+.store-poz-detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 60%;
+  text-align: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+
+    span {
+      color: lightgray;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+  }
+}

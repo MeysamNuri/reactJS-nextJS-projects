@@ -1,0 +1,35 @@
+.video-div{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   height: 50%;
+   text-align: center;
+   padding-bottom: 4vh;
+   justify-content: space-between;
+
+   button{
+      width: calc(100% - 200px);
+      border-radius: 8px;
+      height: 48px;
+      margin: 0px auto;
+      color: #fff;
+      margin-top: 15px;
+      font-size: 1rem;
+      outline: 0;
+      margin-bottom: 20px;
+   }
+   button:hover{
+      cursor: pointer;
+   }
+   video{
+      height: 80vh!important;
+      width: 70%;
+      margin-top: 20px;
+   }
+    
+}
+@media (max-width:768px) {
+   .video-div video{
+      width: 100% !important;
+   }
+}

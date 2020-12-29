@@ -1,0 +1,55 @@
+.point-transaction-list {
+  overflow-y: scroll;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+
+  .point-transaction-item {
+    width: 85%;
+    background-color: #fff;
+    box-shadow: 0 3px 15px #0000000d;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+
+      .point-transaction-amount {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h3 {
+          font-size: 0.9rem;
+        }
+        span {
+          color: #c2cdd9;
+          font-size: 0.8rem;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .point-move-transaction {
+    span {
+      background-color: #009b7f;
+      border-radius: 4px;
+      color: #fff;
+      height: 20px;
+      padding: 0 5px;
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+    }
+  }
+}

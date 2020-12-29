@@ -1,0 +1,81 @@
+.inc-dialog-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .inc-dialog-amount-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #c2cdd9;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h2 {
+        color: #6498e6;
+        font-size: 2rem;
+      }
+      span {
+        color: #6498e6;
+        font-size: 0.8rem;
+        margin-right: 10px;
+      }
+    }
+    .points-dialog-div {
+      justify-content: space-between;
+      width: 95%;
+
+      h3{
+        color: #6498e6;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  p {
+    margin: 10px;
+    font-size: 0.8rem;
+  }
+  .inc-dialog-form {
+    position: relative;
+    width: 100%;
+
+    .inc-dialog-input {
+      background-color: #f6f9fc;
+      width: 100%;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.5rem;
+      height: 48px;
+      color: #009b7f;
+      padding: 5px;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5%;
+      font-size: 0.9rem;
+    }
+  }
+  .inc-dialog-btn {
+    color: #fff;
+    background-color: #009b7f;
+    box-shadow: 0 3px 15px #05cbc466;
+    border-radius: 8px;
+    height: 48px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+}

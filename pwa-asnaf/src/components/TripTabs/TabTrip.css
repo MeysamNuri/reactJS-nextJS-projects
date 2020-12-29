@@ -1,0 +1,31 @@
+
+.tabs {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    direction: rtl;  
+  
+  }
+  .tabs p {
+    margin: 10px 0px;
+    font-size: 12px;
+  }
+  .tab1 {
+    width: 33.5%;
+    cursor: pointer;
+   
+  }
+  .active {
+    border-bottom: 2px solid #64C7E6;
+   transition: 0.4s;
+  }
+  .container{
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  
+  .text-color {
+    color: #c2cdd9;
+  }
+  
+  

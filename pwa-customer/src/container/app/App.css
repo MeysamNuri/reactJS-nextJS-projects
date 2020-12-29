@@ -1,0 +1,325 @@
+@font-face {
+  src: url(/assets/fonts/Vazir-Medium-FD-WOL.ttf);
+  font-family: "VazirMedium";
+}
+
+@font-face {
+  src: url(/assets/fonts/Vazir-Light-FD-WOL.ttf);
+  font-family: "VazirLight";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "VazirMedium", sans-serif;
+  direction: rtl;
+  color: #19212e;
+  max-width: 1024px;
+  margin: 0 auto;
+  outline: none;
+  overflow-anchor: none;
+}
+
+button {
+  border: none;
+  font-family: "VazirMedium";
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-family: "VazirLight";
+}
+
+.gray-bg {
+  background-color: #f6f9fc;
+}
+
+.mapContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.current-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+  width: 46px;
+  height: 36px;
+  position: fixed;
+  bottom: 10% !important;
+  right: 2% !important;
+  z-index: 1;
+}
+.category {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+  width: 102px;
+  height: 36px;
+  position: absolute;
+  bottom: 1% !important;
+  left: 2% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000000 !important;
+  font-size: 1rem;
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-bottom-right > .mapboxgl-ctrl-attrib.mapboxgl-compact::after {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-group:not(:empty) {
+  box-shadow: unset !important;
+  -webkit-box-shadow: unset !important;
+}
+
+.mapboxgl-ctrl-group {
+  background: unset !important;
+  right: 23px;
+  bottom: 18px;
+  position: absolute;
+}
+
+.mapboxgl-ctrl-group > button {
+  background-color: transparent !important;
+}
+
+.mapboxgl-ctrl > button:hover {
+  background-color: transparent !important;
+}
+
+.mapboxgl-ctrl-top-right {
+  right: 12px !important;
+  bottom: 17px !important;
+}
+
+.gray-txt {
+  color: #aab6c4;
+  margin: 10px 0;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.arrow {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  z-index: 2;
+  transform: scale(1.2) rotate(-180deg);
+}
+.big-btn {
+  background-color: #009b7f;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px #87afeb66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.sec-btn {
+  border: 2px solid #009b7f;
+  width: 100%;
+  height: 48px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #009b7f;
+  border-radius: 8px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  margin-bottom: 8px;
+}
+.card-content-div {
+  width: 100%;
+  height: 79vh;
+  overflow-y: scroll;
+  padding: 2vh 0;
+  background-color: #f6f9fc;
+}
+
+.error {
+  color: #d0332c;
+  margin-top: 20px;
+}
+.error-txt {
+  font-size: 0.8rem;
+  color: #d0332c;
+  margin-top: 5px;
+}
+.loading {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(230, 230, 230, 0.5);
+}
+.circular_loading {
+  width: 10vw !important;
+  height: 10vw !important;
+  position: absolute;
+  left: 45vw;
+  top: 45%;
+  color: black !important;
+}
+.pushe-dialog-wrapper {
+  width: 85%;
+}
+.pushe-is-rtl .pushe-buttons-wrapper {
+  margin-bottom: 10px;
+}
+.pushe-buttons-wrapper {
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.pagination-loading {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 56px;
+}
+.code-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkgrey;
+  width: 50%;
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.code-txt span {
+  color: rgb(90, 90, 90);
+  font-size: 0.9rem;
+  z-index: 2;
+}
+.avatar-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.MuiSnackbarContent-root {
+  font-family: "VazirMedium" !important;
+  justify-content: space-between !important;
+}
+.MuiSnackbarContent-action {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05) !important;
+}
+.store-description {
+  border-radius: 9px 0 9px 9px;
+  background-color: #fff;
+  width: 175px;
+  padding: 15px;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  z-index: 1000;
+}
+.MuiBottomNavigationAction-label{
+  font-family: 'VazirMedium' !important;
+  font-size: .7rem;
+}
+.MuiBottomNavigationAction-root.Mui-selected{
+  color: #67A1F4 !important;
+  font-size: 0.775rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .big-btn {
+    max-width: 400px;
+  }
+  .MuiBottomNavigationAction-root{
+    padding: 0 !important;
+  }
+  .current-location{
+    position: absolute;
+  }
+}
+@media (max-width: 320px) {
+  .MuiBottomNavigationAction-label{
+    font-size: .7rem !important;
+  }
+  .MuiBottomNavigationAction-wrapper img{
+    width: 16px;
+    height: 16px;
+  }
+  .MuiBottomNavigationAction-root{
+    padding: 0 !important;
+  }
+}
+.MuiInput-underline:after{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+.MuiSelect-select:focus{
+  background-color: #fff !important;
+}
+@media (min-width: 768px) and (max-width: 1924px) {
+  .current-location{
+    position: absolute;
+  }
+  .makeStyles-root-1{
+    position: absolute !important;
+  }
+}

@@ -1,0 +1,241 @@
+@font-face {
+  src: url(/assets/fonts/Vazir-Medium-FD-WOL.ttf);
+  font-family: "VazirMedium";
+}
+
+@font-face {
+  src: url(/assets/fonts/Vazir-Light-FD-WOL.ttf);
+  font-family: "VazirLight";
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+body {
+  font-family: "VazirMedium", sans-serif;
+  direction: rtl;
+  color: #19212e;
+  max-width: 768px;
+  margin: 0 auto;
+  outline: none;
+}
+
+button {
+  border: none;
+  font-family: "VazirMedium";
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input {
+  border: none;
+  font-family: "VazirLight";
+}
+
+.gray-bg {
+  background-color: #f6f9fc;
+}
+
+.mapContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.current-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+  width: 46px;
+  height: 36px;
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  z-index: 1;
+}
+
+.sidebarStyle {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 1 !important;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.gray-txt {
+  color: #aab6c4;
+  margin: 10px 0;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1000;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  z-index: 2;
+  transform: scale(1.2) rotate(-180deg);
+}
+.big-btn {
+  background-color: #009b7f;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px #87afeb66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.card-content-div {
+  display: flex;
+  width: 100%;
+  height: 87vh;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  overflow-y: scroll;
+  position: relative;
+}
+.card-content-div::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.card-content-div::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+}
+.card-content-div::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.error {
+  color: #d0332c;
+  margin-top: 20px;
+}
+.error-txt {
+  font-size: 0.8rem;
+  color: #d0332c;
+  margin-top: 5px;
+}
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background-color: rgba(230, 230, 230, 0.5);
+}
+.circular_loading {
+  width: 10vw !important;
+  height: 10vw !important;
+  position: absolute;
+  left: 45vw;
+  top: 45%;
+  color: black !important;
+}
+
+.pagination-loading {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  z-index: 1000;
+}
+.code-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkgrey;
+  width: 50%;
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.code-txt span {
+  color: rgb(90, 90, 90);
+  font-size: 0.9rem;
+  z-index: 2;
+}
+.avatar-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.markerCont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  transform: translateX(50%);
+}
+
+.markerText {
+  color: #000d;
+}
+
+.marker-popover {
+  background-color: #fff;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 6px 8px;
+}
+.MuiSnackbarContent-message {
+  margin: 0 auto;
+  font-size: 1rem;
+  font-family: "VazirMedium", sans-serif;
+  font-weight: normal;
+}
+.MuiSnackbarContent-root{
+  padding: 0 !important;
+}
+.header-point {
+  position: absolute;
+  top: 26px;
+  right: 50px;
+  color: #fff;
+  z-index: 1000;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .big-btn {
+    max-width: 400px;
+  }
+}
