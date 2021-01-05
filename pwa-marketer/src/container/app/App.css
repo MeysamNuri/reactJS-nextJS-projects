@@ -1,0 +1,163 @@
+@font-face {
+  src: url(/assets/fonts/IRANSansWeb.woff2);
+  font-family: "iransans";
+}
+@font-face {
+  src: url(/assets/fonts/IRANSansWeb_Bold.woff2);
+  font-family: "iransansbold";
+}
+body {
+  font-family: "iransans";
+  direction: rtl;
+}
+p {
+  margin-bottom: 0;
+}
+.popo {
+  border: 1px dashed #009286;
+  border-radius: 9px;
+  margin: 15px 10px 0;
+  margin-bottom: 25px !important;
+  padding: 8px 15px;
+}
+.JDatePicker {
+  border: 1px dashed #00928685;
+  margin-top: 5px;
+  background-color: #009286 !important;
+  color: #fff;
+}
+.JDatePicker .JC-months {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+/* .JDatePicker .JDheader .right .number:hover{
+   border: 1px dashed #009286;
+   margin: 10px 0;
+} */
+.JDatePicker .JDheader .right input[type="tel"] {
+  top: 2px !important;
+  background: #fff;
+  border: none;
+  color: #009286;
+  margin-right: 8px;
+  padding-right: 8px;
+}
+.JDatePicker .JC-days {
+  color: black;
+}
+.days-titles {
+  width: 100%;
+}
+.JDatePicker .JC-days {
+  width: 100%;
+}
+.days-titles > div {
+  margin: 5px 3px;
+  border: 1px dashed #fff;
+  width: 12% !important;
+}
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #009286;
+  border-color: #009286;
+  color: #fff;
+}
+.ant-modal-title {
+  text-align: center;
+}
+.modal-div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.modal-div input {
+  width: 38%;
+  margin-bottom: 5px;
+  margin-right: 8px;
+}
+.addBank-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.addBank-div2 {
+  border: 1px dotted darkgray;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  border-radius: 9px;
+}
+.ant-modal {
+  width: 680px !important;
+}
+.poz-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin-right: 10px;
+}
+.poz-input input {
+  width: 40px;
+}
+.poz-input-lable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin: 10px 0;
+}
+.JDBackground {
+  background-color: unset !important;
+}
+.spiner {
+  position: absolute;
+  background-color: rgba(168, 168, 168, 0.411);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.spiner svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ant-modal-footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  margin: 0 auto;
+}
+.ant-modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.ant-modal-body p, .ant-modal-body span{
+   text-align: center;
+}
+.MuiSnackbarContent-message {
+  padding: 8px 0;
+  font-size: 1rem;
+  font-family: "iransans" !important;
+}
+/* =================== media query ============== */
+@media only screen and (max-width: 600px) {
+  .JDatePicker {
+    right: 3%;
+  }
+  .poz-input {
+    width: 100%;
+    flex-direction: column;
+  }
+  .poz-input-lable {
+    width: 80%;
+    justify-content: center;
+  }
+}

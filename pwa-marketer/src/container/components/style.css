@@ -1,0 +1,360 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(173, 216, 230, 0.288);
+}
+.login-content {
+  border: 2px dashed #009286;
+  border-radius: 10px;
+  padding: 25px;
+  width: 16%;
+  height: 20%;
+}
+.login-content form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-content form input {
+  margin-bottom: 10px;
+}
+.login-content form button {
+  width: 110px;
+}
+.containers {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.daap-img {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 10px 10px 65px -24px rgba(0, 0, 0, 0.75);
+}
+.daap-img h1 {
+  color: #009286;
+  font-size: 5rem;
+  font-family: "iransansbold";
+}
+.form-content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+}
+.form input {
+  margin-bottom: 10px;
+  text-align: right !important;
+}
+.input-divider {
+  padding: 10px 0;
+  border-bottom: 2px dashed lightgrey;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-divider > div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  position: relative;
+}
+.hnyZDg input {
+  border: none;
+  border: 1px dashed #009286;
+  padding: 10px 20px;
+  border-radius: 9px;
+  margin-right: 15px;
+}
+.hNYVES {
+  overflow: hidden !important;
+  max-width: 510px !important;
+  width: 450px;
+  height: 650px;
+}
+.ant-input:hover {
+  border-color: #009286 !important;
+}
+.ant-input:focus {
+  border-color: #009286;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px #009286;
+  box-shadow: 0 0 0 0.5px #009286;
+}
+.date-icon {
+  position: absolute;
+  top: 27px;
+  left: 23px;
+}
+.select-area {
+  margin: 15px 0 20px 0;
+}
+.select-area .ant-select-selection--single .ant-select-selection__rendered {
+  display: flex;
+  flex-direction: row;
+  padding-right: 8px;
+}
+.select-area .ant-select-selection {
+  box-shadow: 0 0 0 0.5px #009286 !important;
+  border-color: #d9d9d9 !important;
+}
+.select-area .ant-select-dropdown > div {
+  width: 220px !important;
+}
+.select-area .ant-select-dropdown-menu {
+  overflow: visible !important;
+}
+.ant-btn-primary {
+  border-color: #009286;
+  background-color: #009286;
+}
+.ant-btn-primary:hover {
+  color: #009286;
+  background-color: #fff;
+  border-color: #009286;
+}
+.ant-select {
+  align-self: flex-start;
+  width: 150px !important;
+  margin-left: 8px;
+}
+.markerCont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  transform: translateX(50%);
+}
+
+.marker {
+  border-radius: 50%;
+  border: 1px solid #f430ff;
+  /* background-image: url(/assets/images/marker.png); */
+  width: 20px;
+  height: 20px;
+  /* background-color: #F430FF55; */
+}
+
+.markerText {
+  color: #000d;
+}
+
+.marker-popover {
+  background-color: #fff;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 6px 8px;
+}
+.poz-radio .ant-radio-checked .ant-radio-inner {
+  border-color: #009286;
+}
+.poz-radio .ant-radio-input:focus + .ant-radio-inner {
+  box-shadow: 0 0 0 3px #00928628;
+}
+.poz-radio .ant-radio-inner::after {
+  background-color: #009286;
+}
+.poz-radio .ant-radio-inner:hover {
+  border-color: #009286;
+}
+.range .ant-input-number-input {
+  padding-right: 63px;
+}
+.date-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0 20px 0;
+  position: relative;
+  width: 100% !important;
+}
+.input-number {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.error-txt {
+  color: red;
+  margin-bottom: 10px;
+}
+.spiner {
+  position: absolute;
+  background-color: rgba(168, 168, 168, 0.411);
+  width: 100%;
+  height: inherit;
+  z-index: 1000;
+  position: fixed;
+}
+.spiner svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ir {
+  margin-right: 3px;
+  margin-left: 10px;
+  position: absolute;
+  left: 25%;
+  top: 7px;
+}
+.footy {
+  display: flex;
+  flex-direction: row;
+}
+.terminal-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(169, 169, 169, 0.493);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.terminalNum {
+  margin-bottom: 32px !important;
+}
+.pos-detail-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.pos-detail-list > p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.pos-detail-list > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-bottom: 2px dashed #009286;
+}
+.pos-detail-list > div p {
+  margin: 8px 8px 0 0;
+}
+.date-picker-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 70%;
+}
+/* =================== media query ============== */
+@media only screen and (max-width: 600px) {
+  .login-content {
+    width: 75%;
+    height: 30%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .daap-img {
+    width: 100%;
+    height: 30%;
+    position: relative;
+  }
+  .daap-img img {
+    width: 50px;
+    height: 100px;
+    margin-top: 15px;
+  }
+  .daap-img h1 {
+    font-size: 1rem;
+  }
+  .form-content {
+    width: 100%;
+    top: 35%;
+  }
+  .form {
+    width: 90%;
+  }
+  .input-divider > div {
+    width: 80%;
+  }
+  .input-number {
+    margin-right: 0;
+    margin-top: 25px;
+  }
+  .date-div p {
+    margin-bottom: 15px;
+  }
+  .sheba-div {
+    flex-direction: column;
+  }
+  .modal-div .sheba-div input {
+    width: 80%;
+  }
+  .ir {
+    left: -5px;
+  }
+  .footy {
+    width: 100%;
+  }
+  .terminal {
+    flex-direction: column !important;
+  }
+  .terminal > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .terminal input {
+    width: 80% !important;
+  }
+  .terminal-lable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .terminal-lable input {
+    margin-top: 10px;
+  }
+  .terminalNum {
+    margin-bottom: 5px !important;
+  }
+}
