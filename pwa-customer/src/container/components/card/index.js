@@ -12,6 +12,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { getLoading } from "../../pages/loading/action";
 import StatusDialog from "../dialog/statusDialog";
+import moment from 'moment'
 import {
   getDeleteDialog,
   setCardId,
@@ -25,7 +26,17 @@ import DialogDeleteCard from "../dialog/dialogDeleteCard";
 import DialogPopUp from "../dialog/dialogPopUp";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import ActiveCardDialog from "../dialog/activeCardDialog";
+const delayBeforeActivation =300 // seconds after card add with dissapear
+const verify_title =
+  "جهت صحت سنجی کارت بانکی شما، ناگزیر به انجام یک تراکنش 5 هزار تومانی در اپلیکیشن هستیم که فقط یکبار برای همیشه انجام می‏شود. این تراکنش با اتصال به درگاه امن بانک ملت انجام شده و مبلغ فوق بلافاصله به کیف پول شما در اپلیکیشن بازگردانده می‏شود که به همراه سایر پاداش‏های دریافتی از داپ‌اَپ بلافاصله از کیف پول قابل برداشت است.";
 
+function convertSecondToMinuteAndSecond(second) {
+  if (second) {
+  let sec = parseInt(second);
+  return '' + parseInt(sec / 60) + ':' + parseInt(sec % 60);
+  }
+  return '';
+}
 const CardMenuItem = ({ src, txt, color, handleClick }) => {
   return (
     <div
@@ -50,8 +61,6 @@ const CardMenuItem = ({ src, txt, color, handleClick }) => {
 //   marginBottom: "16px",
 //   borderRadius: "8px",
 // };
-const verify_title =
-  "جهت صحت سنجی کارت بانکی شما، ناگزیر به انجام یک تراکنش 5 هزار تومانی در اپلیکیشن هستیم که فقط یکبار برای همیشه انجام می‏شود. این تراکنش با اتصال به درگاه امن بانک ملت انجام شده و مبلغ فوق بلافاصله به کیف پول شما در اپلیکیشن بازگردانده می‏شود که به همراه سایر پاداش‏های دریافتی از داپ‌اَپ بلافاصله از کیف پول قابل برداشت است.";
 
 function Card({
   cardImg,
@@ -63,7 +72,9 @@ function Card({
   flag,
   state,
   enableTimer,
+  createdAt
 }) {
+
   const [cardMenuDisplay, setCardMenuDisplay] = useState("none");
   const [openDialog, setOpenDialog] = useState(false);
   const [params, setParams] = useState(null);
@@ -71,18 +82,79 @@ function Card({
   const [open, setOpen] = useState(true);
   const [copied, setCopied] = useState(false);
   const [method, setMethod] = useState("post");
-  // const [minute, setMinute] = useState(5);
-  // const [second, setSecond] = useState(0);
+
+
+  const [showDelayBeforeCardActivation,setshowDelayBeforeCardActivation]=useState(false)
+  const [timer,setTimer]=useState({
+    timerText: '5:00',
+   timerValue: delayBeforeActivation,
+  })
+  const timerUntilActivation = React.useRef(null)
+  // const doubleCheckFprShowDelayInterval = React.useRef(null)
+  const clearIntervals = ()=>{
+    if (timerUntilActivation&&timerUntilActivation.current) {
+      clearTimeout(timerUntilActivation.current);
+      // timerUntilActivation?.current=null
+    }
+    // if (doubleCheckFprShowDelayInterval&&doubleCheckFprShowDelayInterval?.current) {
+    //   clearTimeout(doubleCheckFprShowDelayInterval?.current);
+    // }
+    // doubleCheckFprShowDelayInterval?.current=null
+  }
+  const updateTimer =()=> {
+    if (timer.timerValue > 1) {
+      const val =timer.timerValue - 1
+      setTimer({
+        timerValue:val,
+        timerText:convertSecondToMinuteAndSecond(val)
+      })
+    } else {
+    clearIntervals();
+    if (showDelayBeforeCardActivation === true){
+      setshowDelayBeforeCardActivation(false)
+      }
+    }
+  }
+
+/*=================== get time function============= */
+
+const checkToShowDelayOverlayBeforeActivation =(mockCreateTime = null) =>{
+  if (createdAt && cardNumber && cardNumber !== '1111111111111111') {
+  let a = moment(new Date());
+  let b = moment(mockCreateTime === null ? createdAt : mockCreateTime);
+  let activationTime = b.add(5, 'minutes');
+  let diff = activationTime.diff(a, 'seconds');
+  // 5 min delay
+  if (diff <= delayBeforeActivation && diff > 0) {
+    setshowDelayBeforeCardActivation(true)
+    setTimer({
+      timerValue:diff,
+      timerText:convertSecondToMinuteAndSecond(diff)
+    })
+  }
+ }
+}
+useEffect(()=>{
+  if(showDelayBeforeCardActivation){
+    clearIntervals();
+    timerUntilActivation.current = setTimeout(updateTimer, 1000);
+    console.log('log::::',cardId,showDelayBeforeCardActivation,timer,)
+  }
+  return ()=>{
+    timerUntilActivation.current=null;
+  }
+},[timer.timerValue])
+
+useEffect(()=>{
+  checkToShowDelayOverlayBeforeActivation()
+},[cardId,createdAt])
+
 
   const cid = useSelector((state) => state.cardReducer.cardId);
-  // const enableTimer = useSelector((state) => state.cardReducer.showTimer);
-  const cardList = useSelector((state) => state.cardReducer.cardList);
-  const minute = useSelector((state) => state.cardReducer.min);
-  const second = useSelector((state) => state.cardReducer.sec);
+
   const activeCardEnable = useSelector(
     (state) => state.cardReducer.activeCardEnable
   );
-
   const [{ data, isLoading, isError, errMessage }] = useDataApi(
     url,
     params,
@@ -111,6 +183,8 @@ function Card({
       "blur(2.5px)";
   };
 
+
+
   useEffect(() => {
     if (activeCardEnable) {
       setUrl("profile/card/active/mobile");
@@ -118,50 +192,6 @@ function Card({
     }
   }, [activeCardEnable]);
 
-  /* ---------------------- Timer -------------------------*/
-  useEffect(() => {
-    let sec;
-    let min;
-    let timer;
-    if (enableTimer) {
-      timer = setInterval(() => {
-        sec = second - 1;
-        if (second > 0) {
-          Dispatch(setSec(sec));
-        }
-        if (second === 0) {
-          if (minute === 0) {
-            clearInterval(timer);
-            Dispatch(setShowTimer(false));
-            if (cardList !== [] && cardList.customer_cards !== undefined) {
-              cardList.customer_cards.forEach((item) => {
-                if (item.enableTimer) {
-                  item.enableTimer = false;
-                }
-              });
-            }
-            let cards = store.get("cards_data");
-            if (cards) {
-              cards.customer_cards.forEach((item) => {
-                if (item.enableTimer) {
-                  item.enableTimer = false;
-                }
-              });
-            }
-            store.set("cards_data", cards);
-          } else {
-            min = minute - 1;
-            Dispatch(setMin(min));
-            Dispatch(setSec(59));
-          }
-        }
-      }, 1000);
-    }
-
-    return () => {
-      clearInterval(timer);
-    };
-  });
 
   useEffect(() => {
     if (
@@ -183,14 +213,19 @@ function Card({
       store.set("cards_data", cards);
       Dispatch(setCardList(cards));
       if (cards.customer_cards.length === 0) {
-        Dispatch(getLoading(true));
+        Dispatch(getLoading(false));
       }
-      if (
-        cards.customer_cards.length <= 1 &&
-        cards.customer_cards[0].card_number === "1111111111111111"
-      ) {
+      if(cards.customer_cards.length <= 1){
         Dispatch(setHasAddCard(false));
+     
       }
+       
+      // if (
+      //   cards.customer_cards.length <= 1 &&
+      //   cards.customer_cards[0].card_number === "1111111111111111"
+      // ) {
+      //   Dispatch(setHasAddCard(false));
+      // }
     }
     // else if (data && data.status === 200 && url === "profile/verify/card") {
     //   setCardMenuDisplay("none");
@@ -217,6 +252,7 @@ function Card({
       setOpenDialog(true);
       setOpen(true);
     }
+   
   }, [data, errMessage]);
 
   const handleClick = (e, id, verified) => {
@@ -280,24 +316,23 @@ function Card({
             <img src="assets/images/back-copy.svg" alt="" />
           </div>
         </div>
-        {enableTimer ? (
-          minute === 0 && second === 0 ? null : (
+        {showDelayBeforeCardActivation &&timer?.timerValue>0 ?(
             <div
               className="timer-div"
-              style={{ display: enableTimer ? "flex" : "none" }}
+              style={{ display:"flex"}}
             >
               <CircularProgress
                 style={{ color: "#fff", marginBottom: "15px" }}
               />
               {
                 <p>
-                  {minute}:{second < 10 ? `0${second}` : second} دیگر کارت بانکی
+                  {`0${timer?.timerText??''}`} دیگر کارت بانکی
                   فعال میگردد
                 </p>
               }
             </div>
           )
-        ) : null}
+         : null}
         <Snackbar
           anchorOrigin={{
             vertical: "bottom",

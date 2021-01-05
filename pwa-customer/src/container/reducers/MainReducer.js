@@ -39,11 +39,23 @@ const initialState = {
   discountDialog: false,
   discountTick: false,
   introLoc: '',
-  SelectedStore:null
+  SelectedStore:null,
+  PspLsit:[],
+  cashback:4
 };
 
 const MainReducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case "GET_CASHBACK":
+      return{
+        ...state,
+        cashback:action.cashback
+      }
+    case "SET_PSPLIST":
+      return{
+        ...state,
+        PspLsit:action.PspLsit
+      }
     case "SELECTED_STORE":
       return{
         ...state,

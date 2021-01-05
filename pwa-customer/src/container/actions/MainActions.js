@@ -10,6 +10,18 @@ export const setSelectedStore = (SelectedStore) => {
     SelectedStore,
   };
 };
+export const setPspLists=(PspLsit)=>{
+  return{
+    type:"SET_PSPLIST",
+    PspLsit:PspLsit
+  }
+}
+export const setCashback=(cashback)=>{
+  return {
+    type:"GET_CASHBACK",
+    cashback
+  }
+}
 export const setShowSlideMenu = (showSideBar) => {
   return {
     type: "SET_SHOW_SLIDE_MENU",

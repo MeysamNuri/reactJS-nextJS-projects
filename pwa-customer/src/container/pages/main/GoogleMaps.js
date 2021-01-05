@@ -12,6 +12,8 @@ import {
   getLng,
   getZoom as index_zoom,
   setMapFlag,
+  setPspLists,
+  setCashback
 } from "../../actions/MainActions";
 import "./main.less";
 import { _round } from "gsap/gsap-core";
@@ -30,8 +32,9 @@ export default function SimpleMap({ id }) {
 
   const default_zoom = useSelector((state) => state.MainReducer.zoom);
   const selectedStore=useSelector((state)=>state.MainReducer.SelectedStore)
-  
+  const getPspList=useSelector((state)=>state.MainReducer.PspLsit)
   const exit = useSelector((state) => state.MainReducer.exit);
+  const getCashback=useSelector((state)=>state.MainReducer.cashback)
   const mapRef = useRef();
   const Dispatch = useDispatch();
   const history = useHistory();
@@ -41,7 +44,7 @@ export default function SimpleMap({ id }) {
   const appStartData = store.get("appStartResult");
   // const [selectedStore, setSelectedStore] = useState(null);
   const [pspList, setPspList] = useState([]);
-  const [StoresCashback,setStoresCashBack]=useState(4);
+  // const [StoresCashback,setStoresCashBack]=useState(4);
   const [params, setParams] = useState(true);
   const [url, setUrl] = useState("");
   const method = "get";
@@ -49,8 +52,10 @@ export default function SimpleMap({ id }) {
 
   useEffect(() => {
     if (data !== null && !isError && !isLoading) {
-      setPspList(data.data.business_details.poses);
-      setStoresCashBack(data.data.business_details.cashback_percentage)
+      // setPspList(data.data.business_details.poses);
+      // setStoresCashBack(data.data.business_details.cashback_percentage)
+      Dispatch(setCashback(data.data.business_details.cashback_percentage))
+      Dispatch(setPspLists(data.data.business_details.poses))
     }
   }, [data, isLoading, isError]);
   
@@ -230,7 +235,6 @@ if(parseFloat(lat) === latt && parseFloat(lng ) === lngg ){
   //   var centerControl = new CenterControl2(centerControlDiv, map);
   //   map.controls[maps.ControlPosition.LEFT_BOTTOM].push(centerControlDiv);
   // };
-
   return (
     <div className="main_map">
       <GoogleMapReact
@@ -371,8 +375,8 @@ if(parseFloat(lat) === latt && parseFloat(lng ) === lngg ){
                       <StoreDescription
                         stores={selectedStore}
                         onClose={closeCallOut}
-                        pspList={pspList}
-                        cashback={StoresCashback}
+                        pspList={getPspList}
+                        cashback={getCashback}
                         
                       
                       />

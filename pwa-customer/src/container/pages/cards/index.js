@@ -43,9 +43,9 @@ function CardsList() {
       });
   };
 
-  // useEffect(() => {
-  //   getCardData()
-  // }, [])
+  useEffect(() => {
+    getCardData()
+  }, [])
 
   useEffect(() => {
     setErrorTitle(
@@ -145,6 +145,7 @@ function CardsList() {
                 flag={true}
                 state={card.state}
                 enableTimer={card.enableTimer}
+                createdAt={card.created_at}
               />
             ))
           ) : localCardList?.customer_cards?.length > 0 ? (
