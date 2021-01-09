@@ -18,9 +18,17 @@ function SlideContent({ open }) {
   let favorites = store.get("favorites_data")
     ? store.get("favorites_data").data
     : [];
-  let cards = store.get("cards_data")
-    ? store.get("cards_data").customer_cards
-    : [];
+  // let cards = store.get("cards_data")
+  //   ? store.get("cards_data").customer_cards
+  //   : [];
+  let cards=[]
+    const userCards=()=>{
+      if(cards === []){
+       cards= store.get("cards_data").customer_cards
+      }
+      else cards=[]
+       
+    }
   const profileData = store.get("profile_data");
   const isSignIn = store.get("isSignIn");
   const credit = store.get("credit_data") ? store.get("credit_data").credit : 0;
@@ -39,6 +47,8 @@ function SlideContent({ open }) {
   const contentRef = useRef(null);
 
   useEffect(() => {
+    userCards()
+  console.log(cards);
     if (favorites) {
       favorites.map((item) => {
         setSubCategories((subCategories) => [

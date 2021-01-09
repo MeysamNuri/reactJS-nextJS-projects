@@ -8,6 +8,7 @@ import "./store.less";
 import FavoritDialog from "../../components/dialog/dialogFavorit";
 import { setFavoritDialog, setShowStoreDes } from "../../actions/MainActions";
 import "./main.less";
+const uniqBy = require('lodash.uniqby');
 const cashback_images={
   green:"assets/images/background-percent.svg",
   red:"assets/images/background-percent-red.svg",
@@ -54,6 +55,7 @@ const cashback_percent_image = useMemo(() => {
   const [params, setParams] = useState(null);
   const method = "post";
   const [{ data, isLoading, isError }] = useDataApi(url, params, method);
+  
   const history = useHistory();
   var img = "";
 
@@ -166,10 +168,8 @@ const cashback_percent_image = useMemo(() => {
     }
   };
 
-  let FilteredPoses=pspList.filter((item,index) => index !==2)
-// console.log(FilteredPoses);
-
-
+   const filterposes=uniqBy(pspList,'psp_id')
+ 
   return (
     <div>
       <FavoritDialog favorite={showFavoriteTxt} text={"main_container"} />
@@ -222,8 +222,8 @@ const cashback_percent_image = useMemo(() => {
         <>
           <div className="poz-detail" onClick={() => handleClick()}>
             <p>دستگاه پوز عضو داپ اَپ در این واحد صنفی:</p>
-            {FilteredPoses !==null &&
-              FilteredPoses.map((item) => (
+            {filterposes !==null &&
+              filterposes.map((item) => (
                 <div key={item.id}>
                       <img src={psp_url + item.psp.icon} alt="" />
                       <p>{item.psp.name}</p>
