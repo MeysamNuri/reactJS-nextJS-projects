@@ -1,0 +1,21 @@
+.loan-tabs {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  direction: rtl;
+}
+.loan-tabs p {
+  margin: 10px 0px;
+}
+.loan-tab1 {
+  width: 50%;
+  cursor: pointer;
+}
+.loan-active {
+  border-bottom: 3px solid #f1429f;
+  transition: 0.4s;
+}
+
+.loan-text-color {
+  color: #c2cdd9;
+}

@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#modal_root{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 0vh;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+.MuiInputLabel-animated{
+  
+  font-family: "VazirLight" !important;
+}
+.MuiMenuItem-root{
+  font-family: "VazirLight" !important;
+}
+
+.MuiSelect-select.MuiSelect-select {
+  font-family: "VazirLight" !important;
+  background-color: white;
+  height: 25px;
+  border-radius: 6px;
+  padding-top: 18px;
+}
+.MuiInput-underline:before{
+  border-bottom: none !important;
+}
+.MuiSelect-icon {
+right: 91% !important;
+
+
+}
+.makeStyles-formControl-6 {
+  margin-right: 0px !important;
+  margin-bottom: 26px !important;
+
+}
