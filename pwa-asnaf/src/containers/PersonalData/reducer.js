@@ -6,26 +6,41 @@
 import produce from "immer";
 
 export const initialState = {
-   fname: '',
-   lname: '',
-   nationalId: '',
-   email: '',
-   sheba: '',
-   storeName: '',
-   category: '',
-   tel:'',
-   address:'',
-   description:''
+  fname: "",
+  lname: "",
+  nationalId: "",
+  email: "",
+  sheba: "",
+  storeName: "",
+  category: "",
+  tel: "",
+  address: "",
+  description: "",
 };
 
 /* eslint-disable default-case, no-param-reassign */
 const personDataReducer = (state = initialState, action) =>
   produce(state, (/* draft */) => {
     switch (action.type) {
+      case "SET_SELECTED_CITY":
+        return {
+          ...state,
+          RegionId: action.RegionId,
+        };
       case "SET_FNAME":
         return {
           ...state,
           fname: action.fname,
+        };
+      case "SET_MOBILE":
+        return {
+          ...state,
+          userMobile: action.userMobile,
+        };
+      case "SET_LINK":
+        return {
+          ...state,
+          link: action.link,
         };
       case "SET_LNAME":
         return {
@@ -57,6 +72,11 @@ const personDataReducer = (state = initialState, action) =>
           ...state,
           category: action.category,
         };
+      case "SET_SELECTED_CITY":
+        return {
+          ...state,
+          selectedCity: action.selectedCity,
+        };
       case "SET_TEL":
         return {
           ...state,
@@ -72,7 +92,7 @@ const personDataReducer = (state = initialState, action) =>
           ...state,
           description: action.description,
         };
-      case 'DEFAULT_ACTION':
+      case "DEFAULT_ACTION":
         break;
     }
   });

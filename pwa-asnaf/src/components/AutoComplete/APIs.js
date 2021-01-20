@@ -5,6 +5,8 @@ const APIs = {
     const { data } = await axios.get("subcategories");
     return data;
   },
+
+  
 };
 
 export default APIs;

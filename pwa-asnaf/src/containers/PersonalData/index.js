@@ -6,16 +6,24 @@
 
 import React, { useState } from "react";
 import "./personal-data.less";
-import { setFName, setLName, setNationalId, setEmail, setSheba } from "./action";
+import {
+  setFName,
+  setLName,
+  setNationalId,
+  setEmail,
+  setSheba,
+  setUserMobile,
+} from "./action";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import store from 'store-js';
+import store from "store-js";
 
 const initialState = {
   displayFNameErr: "none",
   displayNationalIdErr: "none",
   displayEmailErr: "none",
-  displayLNameErr: 'none'
+  displayLNameErr: "none",
+  displayMobileErr: "none",
 };
 
 export function PersonalData() {
@@ -25,10 +33,11 @@ export function PersonalData() {
   const lname = useSelector((state) => state.personDataReducer.lname);
   const nationalId = useSelector((state) => state.personDataReducer.nationalId);
   const email = useSelector((state) => state.personDataReducer.email);
-  const mobile = store.get('phoneNumber');
+  const userMobile = useSelector((state) => state.personDataReducer.userMobile);
+  // const mobile = store.get('phoneNumber');
 
   const [
-    { displayFNameErr, displayLNameErr, displayNationalIdErr, displayEmailErr },
+    { displayFNameErr, displayLNameErr, displayNationalIdErr, displayEmailErr,displayMobileErr },
     setState,
   ] = useState(initialState);
   const [showErrTxt, setShowErrTxt] = useState("none");
@@ -44,8 +53,13 @@ export function PersonalData() {
         break;
       case "lname":
         dispatch(setLName(e.target.value));
-        setState((prevState) => ({ ...prevState, displayLNameErr: "none" }));
+        setState((prevState) => ({ ...prevState,displayLNameErr: "none" }));
         break;
+      case "mobileNumber":
+        dispatch(setUserMobile(e.target.value));
+        setState((prevState) => ({ ...prevState, displayMobileErr: "none" }));
+        break;
+
       case "id-national":
         dispatch(setNationalId(e.target.value));
         setState((prevState) => ({
@@ -57,8 +71,8 @@ export function PersonalData() {
         dispatch(setEmail(e.target.value));
         setState((prevState) => ({ ...prevState, displayEmailErr: "none" }));
         break;
-        default:
-          break;
+      default:
+        break;
     }
   };
 
@@ -69,12 +83,16 @@ export function PersonalData() {
       /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|'(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*')@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
     );
     const numberRegex = new RegExp("^[0-9]*$");
+    const phoneNumberRegex = new RegExp(/^(\+98|0)?9\d{9}/);
 
     switch (names) {
       case "lname":
         if (lname.length > 2) {
           if (regString.test(lname)) {
-            setState((prevState) => ({ ...prevState, displayLNameErr: "none" }));
+            setState((prevState) => ({
+              ...prevState,
+              displayLNameErr: "none",
+            }));
           } else {
             setState((prevState) => ({
               ...prevState,
@@ -86,7 +104,10 @@ export function PersonalData() {
       case "fname":
         if (fname.length > 2) {
           if (regString.test(fname)) {
-            setState((prevState) => ({ ...prevState, displayFNameErr: "none" }));
+            setState((prevState) => ({
+              ...prevState,
+              displayFNameErr: "none",
+            }));
           } else {
             setState((prevState) => ({
               ...prevState,
@@ -129,6 +150,20 @@ export function PersonalData() {
             }));
           }
         }
+        case "mobileNumber":
+          if(userMobile.length >0){
+            if(!phoneNumberRegex.test(userMobile)){
+              setState((prevState) => ({
+                ...prevState,
+                displayMobileErr: "block",
+              }));
+            }else{
+              setState((prevState) => ({
+                ...prevState,
+                displayMobileErr: "none",
+              }));
+            }
+          }
         break;
       default:
         break;
@@ -137,8 +172,14 @@ export function PersonalData() {
 
   const handleGotoNext = (e) => {
     e.preventDefault();
-    if (lname.length !== 0 && fname.length !== 0 && nationalId.length !== 0 ) {
-      store.set('personData',{lname: lname, fname: fname, nationalId: nationalId, email: email })
+    if (lname.length !== 0 && fname.length !== 0 && nationalId.length !== 0 && userMobile.length !== 0) {
+      store.set("personData", {
+        lname: lname,
+        fname: fname,
+        nationalId: nationalId,
+        email: email,
+        mobile:userMobile
+      });
       history.push("store-data");
     } else {
       setShowErrTxt("block");
@@ -148,9 +189,12 @@ export function PersonalData() {
   return (
     <div className="gray-bg">
       <div className="personal-data">
-        <div className='top-txt'>
+        <div className="top-txt">
           <p>به داپ‌اَپ اصناف خوش آمدید</p>
-          <span>جهت پیوستن به خانواده اصناف داپ اَپی و بهره مندی از مزایای منحصر به فرد آن، فرم زیر را تکمیل نمایید</span>
+          <span>
+            جهت پیوستن به خانواده اصناف داپ اَپی و بهره مندی از مزایای منحصر به
+            فرد آن، فرم زیر را تکمیل نمایید
+          </span>
         </div>
         <h2>اطلاعات فردی</h2>
         <form action="" className="profile-form">
@@ -167,12 +211,13 @@ export function PersonalData() {
               onBlur={(e) => handleValidateInput(e)}
               style={{ textAlign: "right", direction: "rtl" }}
             />
+
             <p className="error-txt" style={{ display: displayFNameErr }}>
-              لطفا نام را  به درستی وارد نمایید
+              لطفا نام را به درستی وارد نمایید
             </p>
           </div>
           <div className="form-input">
-            <p>نام و نام خانوادگی</p>
+            <p>  نام خانوادگی</p>
             <input
               type="text"
               name="lname"
@@ -184,12 +229,29 @@ export function PersonalData() {
               onBlur={(e) => handleValidateInput(e)}
               style={{ textAlign: "right", direction: "rtl" }}
             />
-            <span style={{ direction: "ltr" }}>ID: {mobile}</span>
+
+            <span style={{ direction: "ltr" }}>ID: {userMobile}</span>
             <p className="error-txt" style={{ display: displayLNameErr }}>
               لطفا نام خانوادگی را به درستی وارد نمایید
             </p>
+            <p>موبایل</p>
+            <input
+              type="text"
+              name="mobileNumber"
+              id="mobileNumber"
+              placeholder="موبایل"
+              style={{ textAlign: "right",marginBottom:"20px" }}
+              value={userMobile}
+              onChange={(e) => handleInputChanged(e)}
+              onBlur={(e) => handleValidateInput(e)}
+              style={{ textAlign: "right", direction: "rtl" }}
+            />
           </div>
+          <p className="error-txt" style={{ display: displayMobileErr }}>
+              لطفا شماره موبایل خود را به درستی وارد نمایید
+            </p>
           <div className="form-input">
+     
             <p>کد ملی</p>
             <input
               type="text"

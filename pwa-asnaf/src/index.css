@@ -24,3 +24,32 @@ code {
   justify-content: center;
 
 }
+
+.MuiInputLabel-animated{
+  
+  font-family: "VazirLight" !important;
+}
+.MuiMenuItem-root{
+  font-family: "VazirLight" !important;
+}
+
+.MuiSelect-select.MuiSelect-select {
+  font-family: "VazirLight" !important;
+  background-color: white;
+  height: 25px;
+  border-radius: 6px;
+  padding-top: 18px;
+}
+.MuiInput-underline:before{
+  border-bottom: none !important;
+}
+.MuiSelect-icon {
+right: 91% !important;
+
+
+}
+.makeStyles-formControl-6 {
+  margin-right: 0px !important;
+  margin-bottom: 26px !important;
+
+}

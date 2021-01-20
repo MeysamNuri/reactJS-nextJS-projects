@@ -30,6 +30,8 @@ import CustomerDetail from '../../components/customerDetail';
 import SupportForm from "../support-form";
 import QrRequest from "../qrCodeRequest"
 import ShowQRcode from "../qrCodeRequest/showQRCode";
+import  StoreDataWeb  from "../StoreData/store_data_web";
+import DoneWeb from "../Done/DoneWeb";
 var token = localStorage.getItem("token");
 
 (async function () {
@@ -53,8 +55,12 @@ function App() {
           <Route exact path="/personal-data" component={PersonalData} />
           {/* صفحه اطلاعات صنف موقع ثبت نام*/}
           <Route exact path="/store-data" component={StoreData} />
+
+          {/* صفحه اطلاعات صنف موقع  برای وب*/}
+          <Route exact path="/store-data-web" component={StoreDataWeb} />
           {/* صفحه پیام تبریک بعد از ثبت صنف*/}
           <Route exact path="/done" component={Done} />
+          <Route exact path="/doneWeb" component={DoneWeb} />
           {/* صفحه انتخاب صنف در صورت داشتن بیشتر از یکی*/}
           <Route exact path="/choose-account" component={ChooseAccount} />
           {/* صفحه اصلی*/}

@@ -10,11 +10,31 @@ export function setLName(lname) {
      lname,
    };
  }
+
+ export function setUserMobile(userMobile) {
+  return {
+    type: "SET_MOBILE",
+    userMobile,
+  };
+}
+
+export function setStoreLink(link) {
+  return {
+    type: "SET_LINK",
+    link,
+  };
+}
 export function setNationalId(nationalId) {
    return {
      type: "SET_NATIONAL_ID",
      nationalId,
    };
+ }
+ export function setRegionId(RegionId){
+   return{
+     type:"SET_SELECTED_CITY",
+     RegionId
+   }
  }
 export function setEmail(email) {
    return {
@@ -22,6 +42,7 @@ export function setEmail(email) {
      email,
    };
  }
+
 export function setSheba(sheba) {
    return {
      type: "SET_SHEBA",

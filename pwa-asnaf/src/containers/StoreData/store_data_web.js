@@ -4,13 +4,15 @@
  *
  */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./store-data.less";
 import {
   setDescription,
   setAddress,
   setTel,
   setStoreName,
+  setUserMobile,
+  setStoreLink,
 } from "../../containers/PersonalData/action";
 import { openSnackbar, setSnackbarMsg } from "../../mainAction/snackbarAction";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,36 +29,51 @@ import CustomInputAutocomplete from "../../components/GetRegions/getCities";
 const initialState = {
   displayStoreNameErr: "none",
   displayTelErr: "none",
+  displayMobileErr: "none",
 };
 
-export function StoreData() {
+function StoreDataWeb() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const storeLatLng = useSelector((state) => state.MainReducer.latlng);
+  //   const storeLatLng = useSelector((state) => state.MainReducer.latlng);
+  const storeLatLng = {
+    lat: "35.7248",
+    lng: "51.3817",
+  };
   const storeName = useSelector((state) => state.personDataReducer.storeName);
   const tel = useSelector((state) => state.personDataReducer.tel);
   const address = useSelector((state) => state.personDataReducer.address);
   const description = useSelector(
     (state) => state.personDataReducer.description
   );
-  const category = useSelector((state) => state.personDataReducer.category);
-  const fname = useSelector((state) => state.personDataReducer.fname);
-  const lname = useSelector((state) => state.personDataReducer.lname);
-  const nationalId = useSelector((state) => state.personDataReducer.nationalId);
-  const email = useSelector((state) => state.personDataReducer.email);
+  //   const category = useSelector((state) => state.personDataReducer.category);
+  const category = "1001";
+  //   const fname = useSelector((state) => state.personDataReducer.fname);
+  const fname = "سجاد";
+  //   const lname = useSelector((state) => state.personDataReducer.lname);
+  const lname = "شفی زاده";
+  //   const nationalId = useSelector((state) => state.personDataReducer.nationalId);
+  const nationalId = "0015223531";
+  // const email = useSelector((state) => state.personDataReducer.email);
+  const email="meysam.nuri71@gmail.com"
   const sheba = useSelector((state) => state.personDataReducer.sheba);
-  const getRegionId=useSelector((state)=>state.personDataReducer.RegionId)
+  //   const getRegionId = useSelector((state) => state.personDataReducer.RegionId);
+  const getRegionId = "105";
   const userMobile = useSelector((state) => state.personDataReducer.userMobile);
+  const link = useSelector((state) => state.personDataReducer.link);
   // const mobile = store.get("phoneNumber");
-  const [{ displayStoreNameErr, displayTelErr }, setState] = useState(
-    initialState
-  );
+  const [
+    { displayStoreNameErr, displayTelErr, displayMobileErr },
+    setState,
+  ] = useState(initialState);
   const [loader, setLoader] = useState(false);
+  const phoneNumberRegex = new RegExp(/^(\+98|0)?9\d{9}/);
+
   const handleInputChanged = (e) => {
     e.persist();
     const names = e.target.name;
- 
+
     switch (names) {
       case "storeName":
         dispatch(setStoreName(e.target.value));
@@ -71,6 +88,16 @@ export function StoreData() {
           ...prevState,
           displayTelErr: "none",
         }));
+        break;
+      case "mobileNumber":
+        dispatch(setUserMobile(e.target.value));
+        setState((prevState) => ({
+          ...prevState,
+          displayMobileErr: "none",
+        }));
+        break;
+      case "link":
+        dispatch(setStoreLink(e.target.value));
         break;
       case "address":
         dispatch(setAddress(e.target.value));
@@ -107,50 +134,65 @@ export function StoreData() {
         }));
       }
     }
-    // switch (names) {
-    // case "storeName":
-    //   if (storeName.length > 2) {
-    //     if (regString.test(storeName)) {
-    //       setState((prevState) => ({ ...prevState, displayStoreNameErr: "none" }));
-    //     } else {
-    //       setState((prevState) => ({
-    //         ...prevState,
-    //         displayStoreNameErr: "block",
-    //       }));
-    //     }
-    //   }
-    //   break;
-    //   case "tel":
-    //     if (nationalId.length === 11) {
-    //       if (numberRegex.test(tel)) {
-    //         setState((prevState) => ({
-    //           ...prevState,
-    //           displayTelErr: "none",
-    //         }));
-    //       } else {
-    //         setState((prevState) => ({
-    //           ...prevState,
-    //           displayTelErr: "block",
-    //         }));
-    //       }
-    //     } else {
-    //       setState((prevState) => ({
-    //         ...prevState,
-    //         displayTelErr: "block",
-    //       }));
-    //     }
-    //     break;
-    //   default:
-    //     break;
-    // }
+    switch (names) {
+      case "mobileNumber":
+        if (userMobile.length > 0) {
+          if (!phoneNumberRegex.test(userMobile)) {
+            setState((prevState) => ({
+              ...prevState,
+              displayMobileErr: "block",
+            }));
+          } else {
+            setState((prevState) => ({
+              ...prevState,
+              displayMobileErr: "none",
+            }));
+          }
+        }
+        break;
+      // case "storeName":
+      //   if (storeName.length > 2) {
+      //     if (regString.test(storeName)) {
+      //       setState((prevState) => ({ ...prevState, displayStoreNameErr: "none" }));
+      //     } else {
+      //       setState((prevState) => ({
+      //         ...prevState,
+      //         displayStoreNameErr: "block",
+      //       }));
+      //     }
+      //   }
+      //   break;
+      //   case "tel":
+      //     if (nationalId.length === 11) {
+      //       if (numberRegex.test(tel)) {
+      //         setState((prevState) => ({
+      //           ...prevState,
+      //           displayTelErr: "none",
+      //         }));
+      //       } else {
+      //         setState((prevState) => ({
+      //           ...prevState,
+      //           displayTelErr: "block",
+      //         }));
+      //       }
+      //     } else {
+      //       setState((prevState) => ({
+      //         ...prevState,
+      //         displayTelErr: "block",
+      //       }));
+      //     }
+      //     break;
+      default:
+        break;
+    }
   };
- console.log(userMobile);
-  async function registerData(e) {
+console.log(fname,lname,userMobile,link,getRegionId,tel,email);
+  async function registerDataWeb(e) {
     e.preventDefault();
     setLoader(true);
-    if (category !== "" && storeLatLng !== undefined) {
+    if (category !== "" && storeLatLng !== undefined && fname !== "") {
       try {
-        await APIs.registerData(
+        await APIs.registerDataWeb(
           userMobile,
           fname,
           lname,
@@ -162,9 +204,10 @@ export function StoreData() {
           tel,
           address,
           storeLatLng,
-          getRegionId
+          getRegionId,
+          link
         );
-        history.push("done");
+        history.push("doneWeb");
         setLoader(false);
       } catch ({ response }) {
         if (response) {
@@ -177,6 +220,9 @@ export function StoreData() {
       if (category === "") {
         dispatch(setSnackbarMsg("لطفا نوع صنف را انتخاب کنید"));
       }
+      if (fname === "") {
+        dispatch(setSnackbarMsg("لطفا نام خود را مشخص کنید"));
+      }
       if (storeLatLng === undefined) {
         dispatch(setSnackbarMsg("لطفا موقعیت صنف را روی نقشه مشخص کنید"));
       }
@@ -185,7 +231,7 @@ export function StoreData() {
   }
 
   return (
-    <div style={{backgroundColor: "#f6f9fc",height:"auto"}}>
+    <div style={{ backgroundColor: "#f6f9fc", height: "auto" }}>
       <div className="store-data">
         <img
           className="back-btn"
@@ -214,10 +260,10 @@ export function StoreData() {
               </p>
             }
           </div>
-          <div className="form-input" style={{ marginTop: "18px" }}>
+          {/* <div className="form-input" style={{ marginTop: "18px" }}>
             <p>دسته‌بندی کسب و کار</p>
             <AutoComplete />
-          </div>
+          </div> */}
           <div className="form-input" style={{ marginTop: "18px" }}>
             <p>تلفن فروشگاه</p>
             <input
@@ -234,17 +280,47 @@ export function StoreData() {
               لطفا شماره تلفن را به درستی وارد نمایید
             </p>
           </div>
+          <div className="form-input" style={{ marginTop: "18px" }}>
+            <p>موبایل</p>
+            <input
+              type="number"
+              name="mobileNumber"
+              id="mobileNumber"
+              placeholder="موبایل"
+              value={userMobile}
+              onChange={(e) => handleInputChanged(e)}
+              onBlur={(e) => handleValidateInput(e)}
+              style={{ textAlign: "right", direction: "rtl" }}
+            />
+            <p className="error-txt" style={{ display: displayTelErr }}>
+              لطفا شماره موبایل را به درستی وارد نمایید
+            </p>
+          </div>
+
+          <div className="form-input" style={{ marginTop: "18px" }}>
+            <p>لینک فروشگاه</p>
+            <input
+              type="text"
+              name="link"
+              id="link"
+              placeholder="your-store.com"
+              value={link}
+              onChange={(e) => handleInputChanged(e)}
+            
+              style={{
+                textAlign: "left",
+                direction: "ltr",
+                marginBottom: "20px",
+              }}
+            />
+          </div>
           <div
             className="form-input"
             style={{
               position: "relative",
             }}
           >
-             <div className="form-input" style={{ marginTop: "18px" }}>
-          
-            <CustomInputAutocomplete />
-          </div>
-            <p>آدرس</p>
+            <p>آدرس دفتر مرکزی </p>
             <input
               type="text"
               name="address"
@@ -257,12 +333,11 @@ export function StoreData() {
               }}
             />
           </div>
-          <div className="form-input" style={{ marginTop: "18px" }}>
+          {/* <div className="form-input" style={{ marginTop: "18px" }}>
             <p>موقعیت روی نقشه</p>
             <div className="map-div">
-              
               <WrappedMap
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCtVaIE2pz7usVBlj896SGkcgKAHZ7XhdU`}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDTpnAdFWoofJdryMwtV-0DFW1GYg8E0Ks`}
                 loadingElement={
                   <div style={{ height: `100%`, position: "relative" }} />
                 }
@@ -274,7 +349,7 @@ export function StoreData() {
                 }
               />
             </div>
-          </div>
+          </div> */}
           <div className="form-input" style={{ marginTop: "18px" }}>
             <p>درباره‌ی فروشگاه</p>
             <textarea
@@ -288,13 +363,10 @@ export function StoreData() {
             ></textarea>
           </div>
 
-         
-      
-       
           <button
             className="big-btn"
             style={{ zIndex: "1000", marginTop: "25px" }}
-            onClick={(e) => registerData(e)}
+            onClick={(e) => registerDataWeb(e)}
           >
             {loader ? (
               <CircularProgress size="15px" color="inherit" />
@@ -308,4 +380,4 @@ export function StoreData() {
   );
 }
 
-export default StoreData;
+export default StoreDataWeb;

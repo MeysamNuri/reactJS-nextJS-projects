@@ -13,6 +13,7 @@ import personDataReducer from "../containers/PersonalData/reducer";
 import ExpandReducer from "../components/LoanList/reducer";
 import TabTripReducer from "../components/TripTabs/reducer";
 import customerListReducer from '../containers/customerList/reducer';
+import RegionReducer from '../components/GetRegions/reducer'
 
 export default combineReducers({
   MainReducer,
@@ -28,5 +29,6 @@ export default combineReducers({
   TabReducer,
   ExpandReducer,
   TabTripReducer,
-  customerListReducer
+  customerListReducer,
+  RegionReducer
 });
