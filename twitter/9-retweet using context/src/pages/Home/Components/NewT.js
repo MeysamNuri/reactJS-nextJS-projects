@@ -18,8 +18,6 @@ const NewTweet = ( {updateTweet}) => {
   const [imagePath,setImagePath]=useState(null)
 const tweetDispatch=useTweetDispatch()
   const newTweetHandler=()=>{
-    
-
     const form=new FormData()
     form.append("text",Tweet)
     if(imageFile)
