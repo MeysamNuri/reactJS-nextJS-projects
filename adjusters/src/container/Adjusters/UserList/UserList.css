@@ -1,0 +1,25 @@
+.wraperInput {
+  display: flex;
+  align-items: center;
+}
+.wraperInput input {
+  width: 50%;
+  margin-right: 15px;
+}
+
+.marginTopBottom {
+  margin: 20px 0px;
+}
+
+.ant-table-tbody > tr.ant-table-placeholder > td {
+  padding: 20px !important;
+}
+
+.ant-table-tbody > tr.ant-table-placeholder > td > div {
+  color: #F94C66;
+}
+
+.position h3{
+  color: #00a8c8;
+  padding-bottom: 15px;
+}

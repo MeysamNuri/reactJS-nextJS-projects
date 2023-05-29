@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Sanhab.MCT.Adjusters.UI</Name>
+    <RootNamespace>Sanhab.MCT.Adjusters.UI</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a3e12e0b-8494-4b82-ba38-944c78e260c5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="package-lock.json" />
+    <Content Include="public\envconfig.js" />
+    <Content Include="public\index.html" />
+    <Content Include="public\manifest.json" />
+    <Content Include="public\robots.txt" />
+    <Content Include="src\App.css" />
+    <Content Include="src\App.test.js" />
+    <Content Include="src\assets\fonts\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" />
+    <Content Include="src\assets\fonts\IranBold.eot" />
+    <Content Include="src\assets\fonts\IranBold.ttf" />
+    <Content Include="src\assets\fonts\IranBold.woff" />
+    <Content Include="src\assets\fonts\IranRegular.eot" />
+    <Content Include="src\assets\fonts\IranRegular.ttf" />
+    <Content Include="src\assets\fonts\IranRegular.woff" />
+    <Content Include="src\assets\fonts\IranSans.eot" />
+    <Content Include="src\assets\fonts\IranSans.ttf" />
+    <Content Include="src\assets\fonts\IranSans.woff" />
+    <Content Include="src\assets\fonts\IRANSansBold.eot" />
+    <Content Include="src\assets\fonts\IRANSansBold.ttf" />
+    <Content Include="src\assets\fonts\IRANSansBold.woff" />
+    <Content Include="src\assets\fonts\IRANSansLight.eot" />
+    <Content Include="src\assets\fonts\IRANSansLight.ttf" />
+    <Content Include="src\assets\fonts\IRANSansLight.woff" />
+    <Content Include="src\assets\images\add-user-blue.svg" />
+    <Content Include="src\assets\images\addUser.svg" />
+    <Content Include="src\assets\images\archive.svg" />
+    <Content Include="src\assets\images\certificate.svg" />
+    <Content Include="src\assets\images\check.svg" />
+    <Content Include="src\assets\images\download.svg" />
+    <Content Include="src\assets\images\edit.svg" />
+    <Content Include="src\assets\images\email-blue.svg" />
+    <Content Include="src\assets\images\email.svg" />
+    <Content Include="src\assets\images\filter.svg" />
+    <Content Include="src\assets\images\form.svg" />
+    <Content Include="src\assets\images\Group-blue.svg" />
+    <Content Include="src\assets\images\Group.svg" />
+    <Content Include="src\assets\images\inbox.svg" />
+    <Content Include="src\assets\images\interviewTime.svg" />
+    <Content Include="src\assets\images\marjo.svg" />
+    <Content Include="src\assets\images\ok.svg" />
+    <Content Include="src\assets\images\pdf.svg" />
+    <Content Include="src\assets\images\plus.svg" />
+    <Content Include="src\assets\images\Polygon.svg" />
+    <Content Include="src\assets\images\printer.svg" />
+    <Content Include="src\assets\images\profile.svg" />
+    <Content Include="src\assets\images\push-pin.svg" />
+    <Content Include="src\assets\images\question.svg" />
+    <Content Include="src\assets\images\refer.svg" />
+    <Content Include="src\assets\images\Referred.svg" />
+    <Content Include="src\assets\images\remove.svg" />
+    <Content Include="src\assets\images\removeItem.svg" />
+    <Content Include="src\assets\images\scoreboard-tied-blue.svg" />
+    <Content Include="src\assets\images\scoreboard.svg" />
+    <Content Include="src\assets\images\season.svg" />
+    <Content Include="src\assets\images\signature.svg" />
+    <Content Include="src\assets\images\star.svg" />
+    <Content Include="src\assets\images\submitChargon.svg" />
+    <Content Include="src\assets\images\Subtract.svg" />
+    <Content Include="src\assets\images\TRANS-LOGO-512.png" />
+    <Content Include="src\assets\images\TRANS-TEX-LOGO-512.png" />
+    <Content Include="src\assets\images\TRANS-TEX-LOGO-W.png" />
+    <Content Include="src\assets\images\trash.svg" />
+    <Content Include="src\assets\images\upload.svg" />
+    <Content Include="src\assets\images\user.svg" />
+    <Content Include="src\assets\images\web-certificate-blue.svg" />
+    <Content Include="src\assets\images\xls.svg" />
+    <Content Include="src\components\UI\DatePicker\DatePicker.css" />
+    <Content Include="src\components\UI\DatePicker\DatePicker.js" />
+    <Content Include="src\components\UI\UploadFile\UploadFile.css" />
+    <Content Include="src\components\UI\UploadFile\UploadFile.js" />
+    <Content Include="src\container\Adjusters\AdjustersHook.js" />
+    <Content Include="src\container\Adjusters\AdjustersServices.js" />
+    <Content Include="src\container\Adjusters\Courses\Courses.css" />
+    <Content Include="src\container\Adjusters\Documents\Document.css" />
+    <Content Include="src\container\Adjusters\InterviewTime\InterviewTime.css" />
+    <Content Include="src\container\Adjusters\InterviewTime\InterviewTime.jsx" />
+    <Content Include="src\container\Registration\AdjusterFastLogin.module.css" />
+    <Content Include="src\container\Registration\AdjusterFastRegister.module.css" />
+    <Content Include="src\container\Registration\Judical\Document\Document.module.css" />
+    <Content Include="src\container\Registration\Judical\FieldInfo\FieldInfo.module.css" />
+    <Content Include="src\container\Registration\Judical\FinalApproval\FinalApproval.module.css" />
+    <Content Include="src\container\Registration\Judical\FinalModal\FinalApproval.module.css" />
+    <Content Include="src\container\Registration\Judical\Judical.module.css" />
+    <Content Include="src\container\Registration\Judical\PersonalInfo\PersonalInfo.module.css" />
+    <Content Include="src\container\Registration\Judical\Resume\Resume.module.css" />
+    <Content Include="src\container\Registration\Judical\WorkPlace\WorkPlace.module.css" />
+    <Content Include="src\container\Registration\Legal\BoardMember\BoardMember.module.css" />
+    <Content Include="src\container\Registration\Legal\CompanyInfo\CompanyInfo.module.css" />
+    <Content Include="src\container\Registration\Legal\Document\Document.module.css" />
+    <Content Include="src\container\Registration\Legal\Employee\Employee.module.css" />
+    <Content Include="src\container\Registration\Legal\FinalApproval\FinalApproval.module.css" />
+    <Content Include="src\container\Registration\Legal\FinalModal\FinalApproval.module.css" />
+    <Content Include="src\container\Registration\Legal\Legal.module.css" />
+    <Content Include="src\container\Registration\Legal\Stockholder\Stockholder.module.css" />
+    <Content Include="src\container\Registration\Legal\WorkExperience\WorkExperience.module.css" />
+    <Content Include="src\container\Registration\Legal\WorkLocation\WorkLocation.module.css" />
+    <Content Include="src\container\Registration\Natural\Document\Document.module.css" />
+    <Content Include="src\container\Registration\Natural\FieldInfo\FieldInfo.module.css" />
+    <Content Include="src\container\Registration\Natural\FinalApproval\FinalApproval.module.css" />
+    <Content Include="src\container\Registration\Natural\FinalModal\FinalApprovalModal.module.css" />
+    <Content Include="src\container\Registration\Natural\Natural.module.css" />
+    <Content Include="src\container\Registration\Natural\PersonalInfo\PersonalInfo.module.css" />
+    <Content Include="src\container\Registration\Natural\Resume\Resume.module.css" />
+    <Content Include="src\container\Registration\Natural\WorkPlace\WorkPlace.module.css" />
+    <Content Include="src\container\Registration\Registration.css" />
+    <Content Include="src\httpServices\service.js" />
+    <Content Include="src\index.css" />
+    <Content Include="src\index.js" />
+    <Content Include="src\redux\newJusticeId\action.js" />
+    <Content Include="src\redux\newJusticeId\reducer.js" />
+    <Content Include="src\redux\store.js" />
+    <Content Include="src\reportWebVitals.js" />
+    <Content Include="src\routes\index.js" />
+    <Content Include="src\setupTests.js" />
+    <Content Include="src\store.js" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="src\" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\errorsList\" />
+    <Folder Include="src\assets\errorsList\finalApprovalRegistration\" />
+    <Folder Include="src\assets\fonts\" />
+    <Folder Include="src\assets\images\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\components\UI\" />
+    <Folder Include="src\components\UI\DatePicker\" />
+    <Folder Include="src\components\UI\interfaces\" />
+    <Folder Include="src\components\UI\UploadFile\" />
+    <Folder Include="src\constant\" />
+    <Folder Include="src\container\" />
+    <Folder Include="src\container\Adjusters\" />
+    <Folder Include="src\container\Adjusters\Courses\" />
+    <Folder Include="src\container\Adjusters\Documents\" />
+    <Folder Include="src\container\Adjusters\interviewers\" />
+    <Folder Include="src\container\Adjusters\InterviewTime\" />
+    <Folder Include="src\container\Adjusters\RejectBaseInfoSeason\" />
+    <Folder Include="src\container\Adjusters\SpecializedField\" />
+    <Folder Include="src\container\FileDetail\" />
+    <Folder Include="src\container\FileDetail\DescriptionAdjusterFile\" />
+    <Folder Include="src\container\FileDetail\DetermineStatus\" />
+    <Folder Include="src\container\Registration\" />
+    <Folder Include="src\container\Registration\Judical\" />
+    <Folder Include="src\container\Registration\Judical\Document\" />
+    <Folder Include="src\container\Registration\Judical\FieldInfo\" />
+    <Folder Include="src\container\Registration\Judical\FinalApproval\" />
+    <Folder Include="src\container\Registration\Judical\FinalModal\" />
+    <Folder Include="src\container\Registration\Judical\PersonalInfo\" />
+    <Folder Include="src\container\Registration\Judical\Resume\" />
+    <Folder Include="src\container\Registration\Judical\WorkPlace\" />
+    <Folder Include="src\container\Registration\Legal\" />
+    <Folder Include="src\container\Registration\Legal\BoardMember\" />
+    <Folder Include="src\container\Registration\Legal\CompanyInfo\" />
+    <Folder Include="src\container\Registration\Legal\Document\" />
+    <Folder Include="src\container\Registration\Legal\Employee\" />
+    <Folder Include="src\container\Registration\Legal\FinalApproval\" />
+    <Folder Include="src\container\Registration\Legal\FinalModal\" />
+    <Folder Include="src\container\Registration\Legal\Stockholder\" />
+    <Folder Include="src\container\Registration\Legal\WorkExperience\" />
+    <Folder Include="src\container\Registration\Legal\WorkLocation\" />
+    <Folder Include="src\container\Registration\Natural\" />
+    <Folder Include="src\container\Registration\Natural\Document\" />
+    <Folder Include="src\container\Registration\Natural\FieldInfo\" />
+    <Folder Include="src\container\Registration\Natural\FinalApproval\" />
+    <Folder Include="src\container\Registration\Natural\FinalModal\" />
+    <Folder Include="src\container\Registration\Natural\PersonalInfo\" />
+    <Folder Include="src\container\Registration\Natural\Resume\" />
+    <Folder Include="src\container\Registration\Natural\WorkPlace\" />
+    <Folder Include="src\hooks\" />
+    <Folder Include="src\httpServices\" />
+    <Folder Include="src\redux\" />
+    <Folder Include="src\redux\addInterviewtime\" />
+    <Folder Include="src\redux\BaseInfo\" />
+    <Folder Include="src\redux\cartable\" />
+    <Folder Include="src\redux\cartable\adjusterLicence\" />
+    <Folder Include="src\redux\cartable\applicantInterviewTime\" />
+    <Folder Include="src\redux\cartable\chargonLetter\" />
+    <Folder Include="src\redux\cartable\documentApprove\" />
+    <Folder Include="src\redux\cartable\lisJudicalCartable\" />
+    <Folder Include="src\redux\cartable\lisLegalCartable\" />
+    <Folder Include="src\redux\cartable\reffer\" />
+    <Folder Include="src\redux\cartable\workExperienceApprove\" />
+    <Folder Include="src\redux\denominationReligionId\" />
+    <Folder Include="src\redux\dlDocument\" />
+    <Folder Include="src\redux\dlWorkExperience\" />
+    <Folder Include="src\redux\getCourseType\" />
+    <Folder Include="src\redux\getProfilePic\" />
+    <Folder Include="src\redux\getValidCourses\" />
+    <Folder Include="src\redux\interviewerPicture\" />
+    <Folder Include="src\redux\isComeFromRegistration\" />
+    <Folder Include="src\redux\JudicalDraft\" />
+    <Folder Include="src\redux\JudicalDraft\addFamilyMember\" />
+    <Folder Include="src\redux\JudicalDraft\addWorkExperience\" />
+    <Folder Include="src\redux\JudicalDraft\allFamilyMember\" />
+    <Folder Include="src\redux\JudicalDraft\deleteSpecializedFieldInfo\" />
+    <Folder Include="src\redux\JudicalDraft\deletWorkExperienceCertificate\" />
+    <Folder Include="src\redux\JudicalDraft\deletWorkExperience\" />
+    <Folder Include="src\redux\JudicalDraft\disableNextButtonJudicialWorkExperience\" />
+    <Folder Include="src\redux\JudicalDraft\downloadWorkExperienceCertificate\" />
+    <Folder Include="src\redux\JudicalDraft\feildInfo\" />
+    <Folder Include="src\redux\JudicalDraft\getPersonalInfoDraftJudicial\" />
+    <Folder Include="src\redux\JudicalDraft\getProfilePic\" />
+    <Folder Include="src\redux\JudicalDraft\getWorkLocationInfoDraftJudical\" />
+    <Folder Include="src\redux\JudicalDraft\inquire80hoursCertifacate\" />
+    <Folder Include="src\redux\JudicalDraft\inquireFieldCertificate\" />
+    <Folder Include="src\redux\JudicalDraft\listWorkExperienceCertificate\" />
+    <Folder Include="src\redux\JudicalDraft\listWorkExperince\" />
+    <Folder Include="src\redux\JudicalDraft\nationalityIdentify\" />
+    <Folder Include="src\redux\JudicalDraft\newJudicalId\" />
+    <Folder Include="src\redux\JudicalDraft\personalInfo\" />
+    <Folder Include="src\redux\JudicalDraft\postApplicantFieldInfoJudicial\" />
+    <Folder Include="src\redux\JudicalDraft\removeFamilyMember\" />
+    <Folder Include="src\redux\JudicalDraft\uploadProfilePic\" />
+    <Folder Include="src\redux\JudicalDraft\uploadWorkExperienceCertificate\" />
+    <Folder Include="src\redux\JudicalDraft\workPlace\" />
+    <Folder Include="src\redux\Judicial\" />
+    <Folder Include="src\redux\legalDraft\" />
+    <Folder Include="src\redux\legalDraft\boardMember\" />
+    <Folder Include="src\redux\legalDraft\cardWorkExperience\" />
+    <Folder Include="src\redux\legalDraft\companyInfo\" />
+    <Folder Include="src\redux\legalDraft\deleteBoardMember\" />
+    <Folder Include="src\redux\legalDraft\deleteCEOWorkExperienceCertificate\" />
+    <Folder Include="src\redux\legalDraft\deleteCEOWorkExperience\" />
+    <Folder Include="src\redux\legalDraft\deleteEmployee\" />
+    <Folder Include="src\redux\legalDraft\deleteStockholder\" />
+    <Folder Include="src\redux\legalDraft\document\" />
+    <Folder Include="src\redux\legalDraft\employee\" />
+    <Folder Include="src\redux\legalDraft\finalApproval\" />
+    <Folder Include="src\redux\legalDraft\getAllInfoBoardMemberWorkExperience\" />
+    <Folder Include="src\redux\legalDraft\getAllInfoCEOWorkExperience\" />
+    <Folder Include="src\redux\legalDraft\getAllInfoEmployeeLegal\" />
+    <Folder Include="src\redux\legalDraft\getAllInfoStockholderLegal\" />
+    <Folder Include="src\redux\legalDraft\listDraftCEOWorkExperienceLegal\" />
+    <Folder Include="src\redux\legalDraft\listDraftStockholderLegal\" />
+    <Folder Include="src\redux\legalDraft\listEmployee\" />
+    <Folder Include="src\redux\legalDraft\listWorkExperience\" />
+    <Folder Include="src\redux\legalDraft\nextButtonWorkExperience\" />
+    <Folder Include="src\redux\legalDraft\patchDraftBoardMemberLegal\" />
+    <Folder Include="src\redux\legalDraft\patchDraftCEOWorkExperienceLegal\" />
+    <Folder Include="src\redux\legalDraft\patchDraftEmployeeLegal\" />
+    <Folder Include="src\redux\legalDraft\patchDraftStockholderLegal\" />
+    <Folder Include="src\redux\legalDraft\sendReferLegal\" />
+    <Folder Include="src\redux\legalDraft\stockholder\" />
+    <Folder Include="src\redux\legalDraft\uploadLegalWorkExperienceCertificate\" />
+    <Folder Include="src\redux\legalDraft\workExperience\" />
+    <Folder Include="src\redux\legalDraft\workLocationGet\" />
+    <Folder Include="src\redux\legalDraft\workLocation\" />
+    <Folder Include="src\redux\listInterviewTiming\" />
+    <Folder Include="src\redux\NaturalDraft\" />
+    <Folder Include="src\redux\NaturalDraft\allFamilyMember\" />
+    <Folder Include="src\redux\NaturalDraft\deleteSpecializedFieldInfo\" />
+    <Folder Include="src\redux\NaturalDraft\deletWorkExperienceCertificate\" />
+    <Folder Include="src\redux\NaturalDraft\deletWorkExperience\" />
+    <Folder Include="src\redux\NaturalDraft\disableNextButtonNaturalWorkExperience\" />
+    <Folder Include="src\redux\NaturalDraft\downloadWorkExperienceCertificate\" />
+    <Folder Include="src\redux\NaturalDraft\familyMember\" />
+    <Folder Include="src\redux\NaturalDraft\feildInfo\" />
+    <Folder Include="src\redux\NaturalDraft\getPersonalInfoDraftNatural\" />
+    <Folder Include="src\redux\NaturalDraft\getWorkLocationInfoDraftNatural\" />
+    <Folder Include="src\redux\NaturalDraft\inquire80hoursCertifacate\" />
+    <Folder Include="src\redux\NaturalDraft\inquireFieldCertificate\" />
+    <Folder Include="src\redux\NaturalDraft\listWorkExperienceCertificate\" />
+    <Folder Include="src\redux\NaturalDraft\listWorkExperinceGuid\" />
+    <Folder Include="src\redux\NaturalDraft\nationalityIdentify\" />
+    <Folder Include="src\redux\NaturalDraft\personalInformation\" />
+    <Folder Include="src\redux\NaturalDraft\PersonalInfo\" />
+    <Folder Include="src\redux\NaturalDraft\postApplicantFieldInfo\" />
+    <Folder Include="src\redux\NaturalDraft\removeFamilyMember\" />
+    <Folder Include="src\redux\NaturalDraft\sendRefer\" />
+    <Folder Include="src\redux\NaturalDraft\uploadProfilePic\" />
+    <Folder Include="src\redux\NaturalDraft\uploadWorkExperienceCertificate\" />
+    <Folder Include="src\redux\NaturalDraft\workExperience\" />
+    <Folder Include="src\redux\NaturalDraft\workPlace\" />
+    <Folder Include="src\redux\newDraftId\" />
+    <Folder Include="src\redux\newJusticeId\" />
+    <Folder Include="src\redux\newLegalId\" />
+    <Folder Include="src\redux\registrationComponentUnmount\" />
+    <Folder Include="src\redux\sendNatAndRegCodes\" />
+    <Folder Include="src\redux\userEdit\" />
+    <Folder Include="src\routes\" />
+    <Folder Include="src\shared\" />
+    <Folder Include="src\shared\ulitities\" />
+    <Folder Include="src\shared\ulitities\Enums\" />
+    <Folder Include="src\shared\ulitities\Model\" />
+    <Folder Include="src\utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\App.tsx" />
+    <TypeScriptCompile Include="src\assets\errorsList\finalApprovalRegistration\finalApprovalErrors.ts" />
+    <TypeScriptCompile Include="src\components\UI\interfaces\disable-range.interface.ts" />
+    <TypeScriptCompile Include="src\constant\actionTypes.ts" />
+    <TypeScriptCompile Include="src\constant\cartableActionTypes.ts" />
+    <TypeScriptCompile Include="src\constant\commonTypes.ts" />
+    <TypeScriptCompile Include="src\constant\judicalActionTypes.ts" />
+    <TypeScriptCompile Include="src\constant\legalActionTypes.ts" />
+    <TypeScriptCompile Include="src\container\Adjusters\Adjusters.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\CourseInformation.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\Courses\Courses.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\Courses\CreateCourse copy.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\Courses\CreateCourse.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\Courses\interface-course.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\Documents\CreateDocument.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\Documents\Document.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\interviewers\Interviewers.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\InterviewTime\CreateInterviewTime.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\RejectBaseInfoSeason\CreateRejectionInfoSeason.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\RejectBaseInfoSeason\RejectionInfoSeason.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\RejectionApplicants.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\SpecializedField.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\SpecializedField\CreateSpecialzedField.tsx" />
+    <TypeScriptCompile Include="src\container\Adjusters\SpecializedField\SpecializedField.tsx" />
+    <TypeScriptCompile Include="src\container\FileDetail\FileDetail.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\AdjusterEdition.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\AdjusterFastLogin.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\AdjusterFastRegister.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\AdjusterLogin.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\courseOffer.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\ExpireCourse.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\Document\Document.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FieldInfo\FieldInfo.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalApproval\DocumentsFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalApproval\FieldInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalApproval\FinalApproval.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalApproval\PersonalInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalApproval\WorkExperiencesFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalApproval\WorkLocationFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\FinalModal\FinalApprovalModal.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\Judical.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\judicalService.ts" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\PersonalInfo\AddRelation.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\PersonalInfo\PersonalInfo.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\Resume\CardWorkExperince.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\Resume\Resume.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Judical\WorkPlace\WorkPlace.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\BoardMember\BoardMember.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\BoardMember\CardBoardMember.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\CompanyInfo\CompanyInfo.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\Document\Document.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\Employee\CardEmployee.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\Employee\Employee.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\BoardMembersFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\CompanyInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\DocumentsFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\EmployeesFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\FinalApproval.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\StockholderFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\WorkExperiencesFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalApproval\WorkLocationFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\FinalModal\FinalApprovalModal.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\Legal.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\legalService.ts" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\Stockholder\CardStockholder.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\Stockholder\Stockholder.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\WorkExperience\CardWorkExperience.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\WorkExperience\WorkExperience.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Legal\WorkLocation\WorkLocation.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\Document\Document.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FieldInfo\CollapseCertificate.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FieldInfo\FieldInfo.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\CardPersonalInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\DocumentsFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\FieldInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\FinalApproval.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\PersonalInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\WorkExperiencesFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalApproval\WorkLocationInfoFeedback.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\FinalModal\FinalApprovalModal.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\Natural.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\NaturalService.ts" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\PersonalInfo\PersonalInfo.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\Resume\CardWorkExperince.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\Resume\Resume.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Natural\WorkPlace\WorkPlace.tsx" />
+    <TypeScriptCompile Include="src\container\Registration\Registration.tsx" />
+    <TypeScriptCompile Include="src\hooks\tokenExternalUsers.ts" />
+    <TypeScriptCompile Include="src\hooks\usePrevious.ts" />
+    <TypeScriptCompile Include="src\index.tsx" />
+    <TypeScriptCompile Include="src\react-app-env.d.ts" />
+    <TypeScriptCompile Include="src\redux\addInterviewtime\action.ts" />
+    <TypeScriptCompile Include="src\redux\addInterviewtime\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\BaseInfo\action.tsx" />
+    <TypeScriptCompile Include="src\redux\BaseInfo\reducer.tsx" />
+    <TypeScriptCompile Include="src\redux\cartable\adjusterLicence\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\adjusterLicence\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\applicantInterviewTime\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\applicantInterviewTime\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\chargonLetter\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\chargonLetter\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\documentApprove\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\documentApprove\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\lisJudicalCartable\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\lisJudicalCartable\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\lisLegalCartable\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\lisLegalCartable\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\reffer\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\reffer\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\workExperienceApprove\action.ts" />
+    <TypeScriptCompile Include="src\redux\cartable\workExperienceApprove\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\denominationReligionId\action.tsx" />
+    <TypeScriptCompile Include="src\redux\denominationReligionId\reducer.tsx" />
+    <TypeScriptCompile Include="src\redux\dlDocument\action.ts" />
+    <TypeScriptCompile Include="src\redux\dlDocument\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\dlWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\dlWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\getCourseType\action.ts" />
+    <TypeScriptCompile Include="src\redux\getCourseType\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\getProfilePic\action.tsx" />
+    <TypeScriptCompile Include="src\redux\getProfilePic\reducer.tsx" />
+    <TypeScriptCompile Include="src\redux\getValidCourses\action.ts" />
+    <TypeScriptCompile Include="src\redux\getValidCourses\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\interviewerPicture\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\isComeFromRegistration\action.ts" />
+    <TypeScriptCompile Include="src\redux\isComeFromRegistration\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\addFamilyMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\addFamilyMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\addWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\addWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\allFamilyMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\allFamilyMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\deleteSpecializedFieldInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\deleteSpecializedFieldInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\deletWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\deletWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\deletWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\deletWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\disableNextButtonJudicialWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\disableNextButtonJudicialWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\downloadWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\downloadWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\feildInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\feildInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\getPersonalInfoDraftJudicial\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\getPersonalInfoDraftJudicial\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\getProfilePic\action.tsx" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\getProfilePic\reducer.tsx" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\getWorkLocationInfoDraftJudical\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\getWorkLocationInfoDraftJudical\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\inquire80hoursCertifacate\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\inquire80hoursCertifacate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\inquireFieldCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\inquireFieldCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\listWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\listWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\listWorkExperince\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\listWorkExperince\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\nationalityIdentify\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\nationalityIdentify\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\newJudicalId\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\newJudicalId\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\personalInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\personalInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\postApplicantFieldInfoJudicial\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\postApplicantFieldInfoJudicial\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\removeFamilyMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\removeFamilyMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\uploadProfilePic\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\uploadProfilePic\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\uploadWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\uploadWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\workPlace\action.ts" />
+    <TypeScriptCompile Include="src\redux\JudicalDraft\workPlace\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\boardMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\boardMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\cardWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\cardWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\companyInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\companyInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteBoardMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteBoardMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteCEOWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteCEOWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteCEOWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteCEOWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteEmployee\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteEmployee\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteStockholder\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\deleteStockholder\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\document\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\document\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\employee\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\employee\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\finalApproval\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\finalApproval\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoBoardMemberWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoBoardMemberWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoCEOWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoCEOWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoEmployeeLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoEmployeeLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoStockholderLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\getAllInfoStockholderLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listDraftCEOWorkExperienceLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listDraftCEOWorkExperienceLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listDraftStockholderLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listDraftStockholderLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listEmployee\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listEmployee\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\listWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\nextButtonWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\nextButtonWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftBoardMemberLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftBoardMemberLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftCEOWorkExperienceLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftCEOWorkExperienceLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftEmployeeLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftEmployeeLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftStockholderLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\patchDraftStockholderLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\sendReferLegal\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\sendReferLegal\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\stockholder\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\stockholder\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\uploadLegalWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\uploadLegalWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\workExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\workExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\workLocationGet\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\workLocationGet\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\workLocation\action.ts" />
+    <TypeScriptCompile Include="src\redux\legalDraft\workLocation\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\listInterviewTiming\action.ts" />
+    <TypeScriptCompile Include="src\redux\listInterviewTiming\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\allFamilyMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\allFamilyMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\deleteSpecializedFieldInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\deleteSpecializedFieldInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\deletWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\deletWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\deletWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\deletWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\disableNextButtonNaturalWorkExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\disableNextButtonNaturalWorkExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\downloadWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\downloadWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\familyMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\familyMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\feildInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\feildInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\getPersonalInfoDraftNatural\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\getPersonalInfoDraftNatural\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\getWorkLocationInfoDraftNatural\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\getWorkLocationInfoDraftNatural\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\inquire80hoursCertifacate\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\inquire80hoursCertifacate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\inquireFieldCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\inquireFieldCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\listWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\listWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\listWorkExperinceGuid\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\listWorkExperinceGuid\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\nationalityIdentify\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\nationalityIdentify\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\personalInformation\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\personalInformation\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\PersonalInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\PersonalInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\postApplicantFieldInfo\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\postApplicantFieldInfo\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\removeFamilyMember\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\removeFamilyMember\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\sendRefer\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\sendRefer\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\uploadProfilePic\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\uploadProfilePic\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\uploadWorkExperienceCertificate\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\uploadWorkExperienceCertificate\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\workExperience\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\workExperience\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\workPlace\action.ts" />
+    <TypeScriptCompile Include="src\redux\NaturalDraft\workPlace\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\newDraftId\action.ts" />
+    <TypeScriptCompile Include="src\redux\newDraftId\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\newLegalId\action.ts" />
+    <TypeScriptCompile Include="src\redux\newLegalId\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\registrationComponentUnmount\action.ts" />
+    <TypeScriptCompile Include="src\redux\registrationComponentUnmount\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\sendNatAndRegCodes\action.ts" />
+    <TypeScriptCompile Include="src\redux\sendNatAndRegCodes\reducer.ts" />
+    <TypeScriptCompile Include="src\redux\userEdit\action.ts" />
+    <TypeScriptCompile Include="src\redux\userEdit\reducer.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Enums\adjusterTypeId.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Enums\refer.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Enums\relationshipId.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Enums\workTaskFlow.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\grigorianToJalaliFromServer.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\grigorianTojalaliObjFormat.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\jalaliToGrigorian.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\documentApprove.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\draftJudical.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\draftLegal.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\draftNatural.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\interviewers.tsx" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\interviewerTime.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\interviewSeccionInterviwrs.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\oneAdjuster.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\personalInfoDetail.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\reffer.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\score.ts" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\workExperienceApprove.tsx" />
+    <TypeScriptCompile Include="src\shared\ulitities\Model\workTaskFlow.tsx" />
+    <TypeScriptCompile Include="src\shared\ulitities\validation.ts" />
+    <TypeScriptCompile Include="src\utils\utils.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,251 @@
+.ant-card-head-title {
+  text-align: right;
+  font-family: IRANSans;
+  font-weight: bold !important;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.ant-card-body {
+  text-align: right;
+}
+
+label {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 13px;
+  color: #343434;
+}
+
+.judical {
+  background: #1e543d;
+  border-radius: 2px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.iconlegal {
+  background: #3499ff;
+  border-radius: 2px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.natural {
+  background: #d3d3d3;
+  border-radius: 2px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.time {
+  font-family: IRANSans;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 20px;
+  color: #6e768e;
+  position: relative;
+  margin-right: 5px;
+}
+
+.timeText {
+  padding-right: 30px;
+}
+
+.time svg {
+  position: absolute;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ant-card-bordered {
+  background: #ffffff;
+  border: 1px solid rgba(217, 217, 217, 0.3);
+  box-sizing: border-box;
+  box-shadow: 3px 2px 4px rgba(118, 93, 160, 0.03) !important;
+  border-radius: 2px;
+}
+/* .coursesContainer button {
+  margin: 16px;
+
+} */
+.coursesContainer {
+  height: 100%;
+  /* padding: 15px; */
+}
+.gridCourses {
+  clear: both;
+}
+
+.ant-btn-primary {
+  /* background: #3499FF !important; */
+  font-size: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(217, 217, 217, 0.3);
+  box-sizing: border-box;
+  box-shadow: 3px 2px 4px rgba(118, 93, 160, 0.03);
+  border-radius: 2px;
+  padding: 8px;
+  margin-top: 16px;
+  height: 150px;
+  max-height: 150px;
+  /* overflow-y: scroll; */
+}
+
+.title {
+  padding-bottom: 25px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: right;
+  color: #000000;
+}
+
+
+.ant-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+body {
+  background: #f5f6f8;
+}
+.editable {
+  display: flex;
+}
+
+.editable a {
+  padding: 12px;
+  padding: 0px;
+}
+
+.rdp__input--start {
+  border: 1px solid #cccccc;
+}
+.rdp__input--end {
+  border: 1px solid #cccccc;
+}
+.jkcJde h3 {
+  font-size: 12px;
+}
+
+.ant-modal-close {
+  left: 0 !important;
+}
+.ant-select-item-option {
+  font-size: 13px;
+}
+
+.coursesContainer .ant-form-item-label > label {
+  min-width: 87px;
+}
+
+.registerDate {
+  display: flex;
+  align-items: center;
+}
+
+.ant-pagination-total-text {
+  font-size: 12px;
+  font-family: IRANSans;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+}
+
+.action img {
+  margin-right: 5px;
+  margin-top: 5px;
+  display: block;
+}
+
+.bonqgD label {
+  font-size: 11px !important;
+}
+
+.popAction .ant-popover-inner-content {
+  font-size: 8px;
+  text-align: right;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.popAction .ant-popover-arrow {
+  background-color: #000000 !important;
+  border-right-color: #000000 !important;
+  border-bottom-color: #000000 !important;
+  border-left-color: #000000 !important;
+}
+.card h2 {
+  font-size: 12px;
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #6e768e;
+}
+
+.card h2 img {
+  margin-left: 11px;
+}
+
+.card .registerationDate span {
+  margin-right: 28px;
+}
+
+.ant-tabs > .ant-tabs-nav {
+  background-color: #ffffff;
+}
+
+.ant-tabs-tab-btn {
+  font-size: 12px;
+}
+.ant-tabs-tab {
+  padding: 10px;
+}
+.ant-select-dropdown {
+  z-index: 9999999 !important;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .time {
+    font-size: 9px;
+  }
+}
+
+.DateCourse {
+  position: absolute;
+  width: 95%;
+  bottom: 11px;
+}
+
+
+.ant-select-item-option-content {
+  white-space: inherit !important;
+  text-overflow: initial !important;
+}
+
+.ant-select-item {
+  font-size: 12px !important;
+}
+
+/* .ant-select-item-option-active {
+  font-size: 13px  !important;
+} */

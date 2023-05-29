@@ -1,0 +1,14 @@
+.cardDoc{
+    border: 1px solid #d9d9d9;
+    background-color: #fff;
+    padding: 6px;
+    margin-bottom: 5px;
+    width: 50%; 
+    margin-top:20px;
+  
+  }
+  .uploadFile{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }

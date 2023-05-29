@@ -1,0 +1,43 @@
+.App {
+  text-align: right;
+  height: 100%;
+}
+:root {
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  direction: rtl;
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+aside {
+  background: rgba(52, 153, 255, 0.1) !important;
+  border-radius: 5px !important  ;
+}
+
+aside section h6 {
+  font-size: 11px !important;
+  font-weight: bold;
+}
+.ant-modal-header {
+  background: #eff0f3;
+  border-radius: 2px;
+}
+
+td.ant-table-column-sort {
+  background: none;
+}
