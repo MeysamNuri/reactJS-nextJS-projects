@@ -1,0 +1,77 @@
+button span {
+  padding-right: 5px;
+}
+button {
+  margin-left: 5px !important;
+}
+.pdf {
+  margin-left: 10px;
+}
+
+.informationAdjuester .btnDetermineStatus {
+  display: flex;
+}
+
+.part2 {
+  padding-top: 24px;
+}
+.informationAdjuester .content ul {
+  padding-top: 20px !important;
+}
+.person  .ProfilePic {
+  width: 100px;
+  border-radius: 2px;
+}
+.person .upload {
+  width: 21;
+  border-radius: 2px;
+}
+
+.marginTop {
+  margin-top: 20px;
+}
+.interviewTimSession {
+  width: 100%;
+  height:236px;
+  overflow-y: scroll;
+}
+.colCenter {
+  text-align: center;
+}
+.colCenter svg {
+  cursor: pointer;
+}
+.fontStyle {
+  font-size: 13px;
+}
+
+.buttonImageCenter {
+  display: flex !important;
+  align-items: center;
+}
+.contentInfo {
+  font-size: 11px;
+}
+
+.classessAddress {
+  line-height: 22px;
+  display: inline-block;
+}
+
+.bodyReject {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.rejectDetemineStatus {
+  position: relative;
+}
+
+.titleInfoAdjuster{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.adjuster-info-holder .ant-col{
+  margin-bottom: 15px;
+}

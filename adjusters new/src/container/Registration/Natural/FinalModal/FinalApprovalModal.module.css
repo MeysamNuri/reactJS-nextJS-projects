@@ -1,0 +1,60 @@
+.root {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.title {
+  display: block;
+  color: #3499ff;
+  text-align: right;
+  margin-top: 60px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 9px;
+  margin: 20 auto;
+  margin-top: 5px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.rowCard {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin: 50px;
+}
+
+.workLocationInfo {
+  width: 90%;
+}
+
+.step {
+  margin: 0 auto;
+  width: 83%;
+  border: 2px solid #d3d3d3;
+  padding: 15px;
+}
+
+.profilePic {
+  width: 50%;
+}
+
+.modalContainer {
+  text-align: center;
+}
+
+.modalContainer > div {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .root {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 10px;
+  }
+}

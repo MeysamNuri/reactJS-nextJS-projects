@@ -1,0 +1,32 @@
+.createButton {
+  float: right;
+  margin: 30px 0;
+}
+.schadular {
+  clear: both;
+}
+
+.rbc-event-label {
+  display: none;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timepickerCustom .ant-picker-panel .ant-picker-footer {
+  display: none;
+}
+
+/* .ant-picker-dropdown {
+  z-index: 899956565263546456415;
+} */
+
+/* .ant-picker-dropdown-rtl .ant-picker-ranges {
+  display: flex;
+} */
+
+/* .timepicker .ant-picker-footer {
+  display: "none";
+} */

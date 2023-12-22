@@ -1,0 +1,393 @@
+.courses {
+  margin: 20px 50px 0px 50px;
+}
+
+.ant-steps-item-title {
+  font-size: 12px !important;
+}
+.ant-steps-item-active .ant-steps-item-description {
+  font-size: 10px !important;
+  color: #1890ff !important;
+}
+
+.ant-steps-item-description {
+  font-size: 10px !important;
+}
+
+.personalInfo .ant-form-item-label label {
+  font-size: 10px !important;
+}
+.personalInfo .formLable .ant-form-item-label label {
+  width: 110px !important;
+  max-width: 110px !important;
+  font-size: 10px !important;
+  white-space: pre-line;
+  text-align: right;
+}
+.personalInfo input,
+.personalInfo textarea,
+.personalInfo select {
+  width: 100%;
+}
+.personalInfo .ant-form-item-control-input {
+  text-align: right;
+  /* margin-right: 20px; */
+}
+.personalInfo .ant-checkbox + span {
+  font-size: 10px;
+}
+
+/* .personalInfo .ant-form-item-control-input-content {
+    margin-right: 23px;
+} */
+
+.StepsContent {
+  margin-top: 16px;
+  border: 1px dashed #ffffff;
+  border-radius: 2px;
+  background-color: #ffffff;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.StepsAction {
+  margin-top: 24px;
+}
+.ant-form-item-extra {
+  text-align: right;
+  padding-top: 17px;
+  font-size: 12px;
+}
+
+.ant-form-item-explain.ant-form-item-explain-error {
+  color: #ff4d4f;
+  text-align: right;
+  font-size: 12px;
+}
+.listFile .ant-collapse-header {
+  font-size: 10px;
+  line-height: 19px;
+  color: #3499ff !important;
+  text-align: center;
+  position: relative;
+}
+/* .listFile .ant-collapse-header span svg {
+  position: absolute;
+  right: 800px;
+} */
+
+.dirTextPlaceHolder {
+  text-align: left;
+}
+.ant-collapse-header {
+  font-size: 12px;
+}
+.nationalCod {
+  width: 315px;
+}
+
+.personalInfo .ant-collapse-header {
+  text-align: right;
+}
+.ant-typography.ant-typography-danger {
+  color: #ff4d4f;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .personalInfo input,
+  .personalInfo textarea,
+  .personalInfo select {
+    width: 100%;
+  }
+
+  .personalInfo .formLable .ant-form-item-label label {
+    width: 100% !important;
+  }
+}
+
+/* VARIABLES -  START */
+/* COLORS  */
+/* DIMENSIONS */
+/* FONTS */
+/* VARIABLES - END */
+/* COMMONS - START */
+.flex-center,
+.wrapper .container .bubble,
+.wrapper .container,
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* COMMONS - END */
+/* STYLES -  START */
+.wrapper {
+  height: 100vh;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #00082e;
+}
+.wrapper .container {
+  width: calc(50vw - 2rem - 2px);
+  height: calc(50vh - 2rem - 4px);
+  border-radius: 2px;
+}
+.wrapper .container .bubble {
+  width: 16rem;
+  height: 8rem;
+  background-color: #fefefe;
+  position: relative;
+}
+.wrapper .container .bubble:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  background-color: inherit;
+}
+.wrapper .container .bubble .tile {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+.wrapper .container:nth-of-type(1) {
+  background-color: #d62268;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.wrapper .container:nth-of-type(1) .bubble {
+  border-radius: 4rem;
+  filter: drop-shadow(3px 3px 6px #aa1b53);
+}
+.wrapper .container:nth-of-type(1) .bubble:after {
+  width: 3rem;
+  height: 1.5rem;
+  clip-path: polygon(0% 0%, 80% 100%, 100% 0%);
+  top: calc(8rem - 2px);
+  left: 60px;
+}
+.wrapper .container:nth-of-type(1) .bubble .tile {
+  background-color: #d62268;
+}
+.wrapper .container:nth-of-type(1) .bubble .tile:nth-of-type(1) {
+  animation: animate1 0.4s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(1) .bubble .tile:nth-of-type(2) {
+  animation: animate1 0.4s 0.1s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(1) .bubble .tile:nth-of-type(3) {
+  animation: animate1 0.4s 0.2s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(2) {
+  background-color: #0062fc;
+  margin-bottom: 4px;
+}
+.wrapper .container:nth-of-type(2) .bubble {
+  border-radius: 0.1rem;
+  filter: drop-shadow(3px 3px 6px #004ec9);
+}
+.wrapper .container:nth-of-type(2) .bubble:after {
+  width: 3rem;
+  height: 2.5rem;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+  top: calc(8rem - 1px);
+  left: 0px;
+}
+.wrapper .container:nth-of-type(2) .bubble .tile {
+  background-color: #0062fc;
+}
+.wrapper .container:nth-of-type(2) .bubble .tile:nth-of-type(1) {
+  animation: animate2 0.4s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(2) .bubble .tile:nth-of-type(2) {
+  animation: animate2 0.4s 0.13s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(2) .bubble .tile:nth-of-type(3) {
+  animation: animate2 0.4s 0.26s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(3) {
+  background-color: #370282;
+  margin-right: 4px;
+}
+.wrapper .container:nth-of-type(3) .bubble {
+  border-radius: 2rem;
+  height: 10rem;
+  filter: drop-shadow(3px 3px 6px #220150);
+}
+.wrapper .container:nth-of-type(3) .bubble:after {
+  width: 3rem;
+  height: 1.5rem;
+  top: calc(100% - 1px);
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+}
+.wrapper .container:nth-of-type(3) .bubble .tile {
+  background-color: #370282;
+  border-radius: 1rem;
+}
+.wrapper .container:nth-of-type(3) .bubble .tile:nth-of-type(1) {
+  animation: animate3 0.6s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(3) .bubble .tile:nth-of-type(2) {
+  animation: animate3 0.6s 0.15s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(3) .bubble .tile:nth-of-type(3) {
+  animation: animate3 0.6s 0.3s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(4) {
+  background-color: #8f0373;
+}
+.wrapper .container:nth-of-type(4) .bubble {
+  border-radius: 4rem;
+  filter: drop-shadow(3px 3px 6px #5d024b);
+}
+.wrapper .container:nth-of-type(4) .bubble .tile {
+  background-color: #8f0373;
+  border-radius: 1rem;
+}
+.wrapper .container:nth-of-type(4) .bubble .tile:nth-of-type(1) {
+  animation: animate4 0.4s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(4) .bubble .tile:nth-of-type(2) {
+  animation: animate4 0.4s 0.1s alternate infinite linear;
+}
+.wrapper .container:nth-of-type(4) .bubble .tile:nth-of-type(3) {
+  animation: animate4 0.4s 0.2s alternate infinite linear;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    min-height: 100vh;
+    height: unset;
+  }
+  .wrapper .container {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  .wrapper .container:nth-of-type(odd) {
+    margin-right: 0;
+  }
+}
+/* STYLES - END */
+/* ANIMATIONS - START */
+@keyframes animate1 {
+  0% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-2em);
+  }
+  100% {
+    transform: translateY(2em);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translateY(3em);
+  }
+  20% {
+    transform: translateY(3em);
+    height: 2em;
+  }
+  50% {
+    height: 6em;
+  }
+  80% {
+    height: 2em;
+    transform: translateY(-3em);
+  }
+  100% {
+    transform: translateY(-3em);
+  }
+}
+@keyframes animate4 {
+  0% {
+    height: 2em;
+  }
+  40% {
+    height: 2em;
+  }
+  100% {
+    height: 5em;
+  }
+}
+/* ANIMATIONS - END */
+
+.anticon-mobile svg:hover {
+  -webkit-animation: tada 1s forwards;
+  animation: tada 1s forwards;
+  /*    
+    width: 100px;
+    height: 100px;
+     position: relative;
+    animation:tade 1s forwards;
+    animation-duration: 4s;
+    animation-delay: -2s; */
+}
+
+.anticon-mobile svg {
+  width: 100px;
+  height: 100px;
+}
+
+.listFile > .ant-collapse-item > .ant-collapse-header {
+  position: relative;
+  /* padding: 12px 16px; */
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.5715;
+  cursor: pointer;
+  transition: all 0.3s, visibility 0s;
+  /* text-align: center; */
+  font-weight: bold;
+  width: 20%;
+  margin: 0 auto;
+}
+
+/* 
+.listFile  > .ant-collapse-item > .ant-collapse-header   svg  {
+ right: 750px;
+} */
+
+/* @media screen and (max-width: 1880px) {
+  .listFile  > .ant-collapse-item > .ant-collapse-header   svg  {
+   right: 740Px;
+  }
+  
+}
+
+@media screen and (max-width: 1832px) {
+  .listFile  > .ant-collapse-item > .ant-collapse-header   svg  {
+   right: 710Px;
+  }
+}
+
+@media screen and ( max-width: 1832px) {
+  .listFile  > .ant-collapse-item > .ant-collapse-header   svg  {
+   right: 700Px;
+  }
+}
+
+@media screen and ( max-width:1436px) {
+  .listFile  > .ant-collapse-item > .ant-collapse-header   svg  {
+   right: 500Px;
+  }
+} */

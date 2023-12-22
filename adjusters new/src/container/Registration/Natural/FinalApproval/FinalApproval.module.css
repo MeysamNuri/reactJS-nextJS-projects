@@ -1,0 +1,72 @@
+.root {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.title {
+  display: block;
+  color: #3499ff;
+  text-align: right;
+  margin-top: 60px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 9px;
+  margin: 20 auto;
+  margin-top: 5px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.rowCard {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  margin-top: 50px;
+  padding: 15px;
+  margin-left: 75px;
+}
+
+.workLocationInfo {
+  width: 90%;
+}
+
+.step {
+  margin: 0 auto;
+  width: 83%;
+  padding: 15px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  margin-bottom: 5px;
+}
+
+.profilePic {
+  width: 50%;
+}
+
+.modalContainer {
+  text-align: center;
+}
+
+.modalContainer > div {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .root {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+.titleColumn {
+  font-size: 12px;
+  line-height: 20px;
+  color: #7a848e;
+  font-weight: bold;
+}
