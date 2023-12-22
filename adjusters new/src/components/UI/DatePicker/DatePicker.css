@@ -1,0 +1,19 @@
+.custom_calender {
+    width: 100%; 
+    border: 1px solid #d9d9d9;
+    padding: 5px;
+   
+}
+.tether-element {
+    z-index: 99999;
+  /*  transform: translateX(141px) translateY(275px) translateZ(0px) !important; */
+  
+}
+.calendar{
+  position: relative;
+}
+.calendar img{
+  position: absolute;
+  left: 5px;
+  top:5px
+}
