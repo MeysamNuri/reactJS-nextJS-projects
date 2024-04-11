@@ -66,7 +66,7 @@ const blogsSlice = createSlice({
             state.blogs=action.payload
         })
             .addCase(fetchBlogs.rejected,(state,action)=>{
-            state.status="failure"
+            state.status="failed"
             state.error=action.error.message
         })
     }
