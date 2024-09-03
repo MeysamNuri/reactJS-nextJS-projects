@@ -1,7 +1,7 @@
 import { useRef, forwardRef, useImperativeHandle } from "react";
 
 let BootstrapInput = (props, ref) => {
-  const inputRef = useRef();
+  // const inputRef = useRef();
 
   useImperativeHandle(ref, () => ({
     focus: () => {
