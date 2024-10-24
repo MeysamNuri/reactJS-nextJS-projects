@@ -1,23 +1,18 @@
 import {NextResponse} from 'next/server'
 
 // export function middleware(request){
-//     return NextResponse.redirect(new URL("/quiz",request.url))
-//     return NextResponse.rewrite(new URL("/under-construction", request.url));
-
-//     //or
-//     if(request.nextUrl.pathname.startsWith("/about")){
-//         return NextResponse.redirect(new URL("/quiz",request.url))
-//     }
-
+//     // if(request.nextUrl.pathname.startsWith("/about")){
+//     //     return NextResponse.redirect(new URL("/quiz",request.url))
+//     // }
+//      return NextResponse.redirect(new URL("/quiz",request.url))
+ 
+//     // return NextResponse.rewrite(new URL("/under-construction",request.url))
+// }
+// export const config={
+//     matcher:["/about/:path*","/api/:path*"]
+//     // matcher:'/((?!api|_next/static|favicon.ico|about).*)', //you can find this regex in google by search(regex ignore pages in next)
 // }
 
-// export const config = {
-//     matcher: "/about/:path*",
-// };
-
-// export const config = {
-//     matcher: "/((?!api|_next/static|_next/image|favicon.ico).*)",
-// };
 export function middleware(request) {
     // Clone the request headers and set a new header `x-hello-from-middleware1`
     const requestHeaders = new Headers(request.headers);
@@ -26,12 +21,11 @@ export function middleware(request) {
     // Assume a "Cookie:nextjs=fast" header to be present on the incoming request
     // Getting cookies from the request using the `RequestCookies` API
     let cookie = request.cookies.get("nextjs");
-    console.log(cookie,"ccccccccc"); // => { name: 'nextjs', value: 'fast', Path: '/' }
+    console.log(cookie); // => { name: 'nextjs', value: 'fast', Path: '/' }
     const allCookies = request.cookies.getAll();
-    console.log(allCookies,"alllllllll"); // => [{ name: 'nextjs', value: 'fast' }]
+    console.log(allCookies); // => [{ name: 'nextjs', value: 'fast' }]
 
-   let check= request.cookies.has("nextjs"); // => true
-   console.log(check,"check");
+    request.cookies.has("nextjs"); // => true
     request.cookies.delete("nextjs");
     request.cookies.has("nextjs"); // => false
 
@@ -42,7 +36,7 @@ export function middleware(request) {
         },
     });
     // Set a new response header `x-hello-from-middleware2`
-    response.headers.set("x-hello-from-middleware2", "hellowwww");
+    response.headers.set("x-hello-from-middleware2", "hello");
 
     response.cookies.set("vercel", "fast");
     response.cookies.set({
