@@ -1,0 +1,120 @@
+.ItemContainer {
+  margin: 20px 5rem;
+  text-align: right;
+}
+.Badge {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.customUpload input[type="file"] {
+  display: none;
+}
+.titleDocument {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fileConent {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-top: 5px;
+}
+.documensRegister {
+  text-align: right;
+}
+.documensRegister p {
+  padding: 20px;
+  font-weight: bold;
+}
+.downlaodRawForm {
+  /* position: absolute; */
+  /* bottom: 15px; */
+  /* right: 5%; */
+  margin-top: 25px;
+  margin-right: 69px;
+}
+.nextStep {
+  display: flex;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+  .downlaodRawForm {
+    display: block;
+    bottom: 0px;
+    right: 0;
+    margin-bottom: 50px;
+  }
+  .nextStep {
+    display: block;
+  }
+}
+.titleColumn {
+  padding: 15px;
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #7a848e;
+}
+
+.noFile {
+  text-align: center;
+  font-size: 12px;
+}
+.customSpin {
+  margin: 20px auto;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 2px;
+}
+.badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  background-color: #52c41a;
+  box-shadow: 0 0 0 1px #52c41a inset;
+  margin-right: 5px;
+}
+
+.badgeRed {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f63c46;
+  box-shadow: 0 0 0 1px #f63c46 inset;
+  margin-right: 5px;
+}
+.card {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 9px 9px 0 9px;
+  margin-top: 5px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.textCenter {
+  text-align: center;
+}
+.marginTop {
+  margin-top: 45px;
+}
+
+.alertDanger {
+  color: red !important;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,111 @@
+{
+  "tweets": [
+    {
+      "sender": {
+        "name": "Xiaomi",
+        "id": "Xiaomi@1234",
+        "img": "/images/koooh_user.png"
+      },
+      "text": " وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین",
+      "likes": 0
+    },
+    {
+      "sender": {
+        "name": "meysam",
+        "id": "@meysam",
+        "img": "/images/b.jpg"
+      },
+      "text": " وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین",
+      "likes": 4
+    },
+    {
+      "sender": {
+        "name": "nav",
+        "id": "@nav",
+        "img": "/images/koooh_user.png"
+      },
+      "text": " وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین",
+      "likes": 58
+    },
+    {
+      "sender": {
+        "name": "hesam",
+        "id": "@hesam",
+        "img": "/images/bil.png"
+      },
+      "text": " وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین وعده غدایی ما برای هر نفر به طور میانگین",
+      "likes": 5
+    },
+    {
+      "id": 565,
+      "sender": {
+        "name": "میثم نوری",
+        "id": "Xiaomi@1234",
+        "img": "/images/koooh_user.png"
+      },
+      "text": "سلام ری اکت",
+      "likes": 9
+    },
+    {
+      "id": 399,
+      "sender": {
+        "name": "میثم نوری",
+        "id": "Xiaomi@1234",
+        "img": "/images/bil.png"
+      },
+      "text": "=ارسال پیام",
+      "likes": 0
+    },
+    {
+      "id": 870,
+      "sender": {
+        "name": "میثم نوری",
+        "id": "Xiaomi@1234",
+        "img": "/images/bil.png"
+      },
+      "text": "سلام عشق",
+      "likes": 0
+    },
+    {
+      "id": 871
+    },
+    {
+      "id": 872
+    }
+  ],
+  "users": [
+    {
+      "name": "Xiaomi",
+      "id": "Xiaomi@1234",
+      "img": "/images/bil.png"
+    },
+    {
+      "name": "asghar",
+      "id": "Xiaomi@ere",
+      "img": "/images/koooh_user.png"
+    },
+    {
+      "name": "khorsh",
+      "id": "efefe@1234",
+      "img": "/images/mike.png"
+    },
+    {
+      "name": "honami",
+      "id": "Xiaomi@dffd",
+      "img": "/images/shily.png"
+    },
+    {
+      "name": "master",
+      "id": "Xiaomi@44333",
+      "img": "/images/samsung.png"
+    }
+  ],
+  "hashtags": [
+    "پرچم_دار_جدید",
+    "ایران",
+    "کرونا ویروس",
+    "سامسونگ",
+    "تیم ملی",
+    "انرژی هسته ای"
+  ]
+}

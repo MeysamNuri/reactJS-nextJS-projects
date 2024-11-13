@@ -1,0 +1,117 @@
+.swiper-container {
+    width: 100%;
+    height: 24vh;
+    margin: 20px 20px 0 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    .swiper-wrapper {
+        height: 100%;
+        width: 100%;
+        display: inline-flex;
+        box-sizing: content-box;
+        position: relative;
+        margin-right: 20px;
+
+        .swiper-slide {
+            position: relative;
+            overflow: hidden;
+
+            .item,
+            .last_slide {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #19212E;
+                font-size: 12px;
+                padding: 8px 18px 0 12px;
+                background: #fff;
+                margin-left: 16px;
+                border-radius: 8px;
+
+                .product {
+                    width: 100%;
+                    height: 10vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    img {
+                        width: 8vh;
+                        height: 8vh;
+                    }
+
+                    .percent_off {
+                        width: 5vh;
+                        height: 5vh;
+                        color: #FFFFFF;
+                        background: #D0332C;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 1vh;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .real_price {
+                    color: #D0332C;
+                    text-decoration: line-through;
+                }
+
+                .Discounted_price {
+                    font-weight: 600;
+                }
+
+                .request {
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0;
+                    width: calc(100% - 16px);
+                    height: 4vh;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #ffffff;
+                    background: #009B7F;
+                    border-radius: 0 0 8px 8px;
+
+                }
+            }
+
+            .last_slide {
+                color: #6498E6;
+                font-family: "VazirMedium";
+                height: calc(100% - 10px);
+                display: flex;
+                justify-content: center;
+
+                .arrow_img {
+                    background-image: url('/assets/images/arrow-left.svg');
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    background-size: 28px;
+                    width: 28px;
+                    height: 18px;
+                    margin-top: 20%;
+                }
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff !important;
+    }
+
+    .swiper-button-disabled {
+        opacity: .35 !important;
+        color: rgb(0, 122, 255) !important;
+    }
+}

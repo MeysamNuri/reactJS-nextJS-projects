@@ -1,0 +1,3 @@
+search for movi api in goolgle for rapidApi
+
+there is a web site called jsonviewer for show your json datas

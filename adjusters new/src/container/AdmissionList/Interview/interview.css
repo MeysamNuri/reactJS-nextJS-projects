@@ -1,0 +1,35 @@
+.interviewTiming .calendar{
+width: 50% !important;
+}
+.interviewTiming{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.interviewTimSession  .ant-empty-image{
+    height: 60px !important;
+    margin-top: 5px;
+}
+.interviewTimSession .ant-empty-image{
+    height: 50px !important;
+}
+
+.ant-empty-image img {
+    height: 66%;
+}
+.interviewTimSession .ant-radio-wrapper{
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.interviewTimSession .ant-empty{
+    margin-top: 60px;
+}
+
+.agent{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.sheba{
+    direction: ltr !important;
+}

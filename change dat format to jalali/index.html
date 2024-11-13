@@ -1,0 +1,25 @@
+<!-- react page-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    import moment from "moment";
+import momentj from "moment-jalaali"; -->
+</head>
+<body>
+    
+    <script>
+
+function dateInJalaali(date) {
+    
+    return momentj(date).format("jYYYY/jMM/jDD");
+  }
+  function convertToDate(time) {
+ 
+      return moment(time).format("hh:mm:ss");
+  }
+  </script>
+</body>
+</html>

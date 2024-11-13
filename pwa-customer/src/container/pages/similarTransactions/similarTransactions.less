@@ -1,0 +1,54 @@
+.container {
+  background-color: #f6f9fc;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  .card {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+
+    .icons {
+      display: flex;
+
+      span {
+        width: 24px;
+        height: 18px;
+      }
+
+      span:first-child {
+        background-image: url("/assets/images/transaction.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        margin-left: 20px;
+      }
+
+      span:last-child {
+        background-image: url("/assets/images/transaction2.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+      }
+    }
+  }
+
+  .transactions_content {
+    width: 85%;
+    padding-top: 1vh;
+    height: 55vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: auto;
+  }
+}

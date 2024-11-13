@@ -1,0 +1,88 @@
+
+.radioGroup {
+  display: flex;
+  justify-content: stretch;
+  width: fit-content;
+  width: 100%;
+}
+
+.radioButtonAdjTp {
+  width: 100%;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.ValidDatefromTo {
+  text-align: center;
+}
+
+.selectAdjTypeText {
+  color: red;
+}
+
+@media only screen and (max-width: 900px) {
+  .ant-form-rtl .ant-form-item-label {
+    text-align: right !important;
+  }
+}
+
+/* .back {
+  display: flex;
+} */
+/* .sms {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 25px;
+} */
+
+.wraperSms {
+  padding: 10px;
+  background: #eff5ee;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #525867;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+.wraperSms svg{
+  position: absolute;
+  top: 32px;
+  right: 28px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+.wraperSms svg:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

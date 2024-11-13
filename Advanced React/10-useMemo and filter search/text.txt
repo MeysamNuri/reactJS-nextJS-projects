@@ -1,0 +1,1 @@
+usememo prevents redefine of value and consts but react.memo prevent redefine functions both are used for optimizing components

@@ -1,0 +1,33 @@
+.StepsContent {
+  margin-top: 16px;
+  border: 1px dashed #ffffff;
+  border-radius: 2px;
+  background-color: #ffffff;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+.root {
+  /* margin: 29px; */
+  padding: 20px;
+}
+
+.StepsAction {
+  margin-top: 24px;
+  float: left;
+}
+.nextStep {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  padding: 15px;
+}
+@media only screen and (max-width: 900px) {
+  .root {
+    margin: 5px;
+  }
+  .StepsContent {
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+}

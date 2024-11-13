@@ -1,0 +1,62 @@
+.notif-container {
+   height: 91vh;
+   margin: 0 auto;
+   max-width: 100%;
+   display: flex;
+   align-items: flex-start;
+   overflow: auto;
+   -webkit-overflow-scrolling: auto;
+ 
+   &::-webkit-scrollbar-track {
+     background-color: transparent;
+   }
+   &::-webkit-scrollbar {
+     background-color: transparent;
+   }
+   &::-webkit-scrollbar-thumb {
+     background-color: transparent;
+   }
+ 
+   .notification-list {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: flex-start;
+     padding-bottom: 15px;
+     width: 100%;
+     margin-bottom: 0 !important;
+ 
+     .notification-box {
+       background-color: #fff;
+       border-radius: 8px;
+       box-shadow: 0px 3px 15px #0000000d;
+       position: relative;
+       padding: 10px 15px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       width: 80%;
+       margin-top: 15px;
+       position: relative;
+       font-size: 0.9rem;
+ 
+       h2 {
+         margin-bottom: 10px;
+         font-size: 1.2rem;
+       }
+       p {
+         font-size: 0.9rem;
+       }
+       .notification-list-circle {
+         position: absolute;
+         top: 5px;
+         left: 5px;
+         border-radius: 50%;
+         width: 10px;
+         height: 10px;
+         background-color: #6498e6;
+       }
+     }
+   }
+ }
+ 

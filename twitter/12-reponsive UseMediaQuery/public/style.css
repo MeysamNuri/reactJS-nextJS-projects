@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    direction: rtl !important;
+}
+.editable:empty:before {
+    content: attr(data-placeholder);
+}
+a{
+    text-decoration: none;
+    width: 100%;
+}
+.uni_m_b_small{
+    margin-bottom: "1rem";
+}

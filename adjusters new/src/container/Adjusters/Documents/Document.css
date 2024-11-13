@@ -1,0 +1,52 @@
+.document .ToggleButton {
+  float: right !important;
+  margin: 20px;
+}
+
+.createModal{
+  margin-bottom: 10px;
+}
+
+.document .nav-item-title {
+  display: flex;
+  align-items: center;
+}
+.adjusterRequire {
+  display: flex;
+}
+
+.adjusterRequire span {
+  margin-right: 10px;
+}
+
+
+.ant-popover-message-title {
+  font-size: 12px;
+}
+.adjustersCheck {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ToggleButton {
+  width: 109px !important;
+}
+.adjusterTitle {
+  width: 60px;
+}
+.operations {
+  padding: 5px;
+}
+
+
+.ant-table-tbody > tr > td {
+  border-bottom: none;
+}
+
+.buttonDoc{
+  display: flex;
+}
+.popoverCustomDc .ant-popover-arrow{
+left: 72% !important;
+}

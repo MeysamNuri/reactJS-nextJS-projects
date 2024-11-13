@@ -1,0 +1,87 @@
+.Badge {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.customUpload input[type="file"] {
+  display: none;
+}
+.titleDocument {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fileConent {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-top: 5px;
+}
+.documensRegister {
+  text-align: right;
+}
+.documensRegister p {
+  padding: 20px;
+  font-weight: bold;
+}
+
+.nextStep {
+  display: flex;
+  margin-top: 50px;
+  padding: 20px;
+}
+.downlaodRawForm {
+  position: absolute;
+  right: 5%;
+}
+@media only screen and (max-width: 600px) {
+  .nextStep {
+    display: block;
+  }
+  .downlaodRawForm {
+    position: relative;
+    right: 0;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 9px 9px 0 9px;
+  margin-top: 5px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  background-color: #52c41a;
+  box-shadow: 0 0 0 1px #52c41a inset;
+  margin-right: 5px;
+}
+
+.badgeRed {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f63c46;
+  box-shadow: 0 0 0 1px #f63c46 inset;
+  margin-right: 5px;
+}
+.textCenter {
+  text-align: center;
+}
+
+.marginTop {
+  margin-top: 45px;
+}

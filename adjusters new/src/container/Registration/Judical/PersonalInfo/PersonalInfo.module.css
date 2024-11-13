@@ -1,0 +1,63 @@
+
+
+.uploader input[type="file"] {
+  display: none;
+}
+.customFileUpload {
+  border: 1px solid #f0f0f0;
+  display: flex;
+  padding: 6px 12px;
+  cursor: pointer;
+  text-align: center;
+  width: 190px;
+  margin-right: 18px;
+  margin-top: 9px;
+  align-items: center;
+  justify-content: space-around;
+}
+.inquiryButton {
+  margin-bottom: 20px;
+}
+.nextStep {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  padding: 20px;
+}
+.uploadBox {
+  margin-right: 20px;
+  background: rgba(196, 196, 196, 0.2);
+  border-radius: 2px;
+  width: 190px;
+}
+
+.uploadBox svg {
+  padding: 10px;
+}
+
+.uploadBox img {
+  width: 180px;
+  max-width: 180px;
+}
+
+.customDate {
+  width: 200px;
+}
+
+.rightButton {
+  justify-content: flex-start;
+  display: flex;
+  margin: 20px 148px;
+}
+
+.militaryRadioGroup {
+  display: flex;
+  /* position: relative; */
+  right: 40px;
+}
+@media screen and (max-width: 800px) {
+  .militaryRadioGroup {
+    right: 0px;
+  }
+}
+

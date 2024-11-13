@@ -1,0 +1,7 @@
+body{
+    direction: rtl !important;
+}
+.MuiDrawer-paperAnchorRight {
+    width: 30% !important;
+    overflow-x: hidden;
+}

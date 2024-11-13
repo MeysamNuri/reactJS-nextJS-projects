@@ -1,0 +1,44 @@
+.faq-content {
+  display: flex;
+  width: 100%;
+  height: 87vh;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  overflow-y: scroll;
+  
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 0;
+    background: transparent;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  .linktoform {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+      border: 2px solid #c2cdd9;
+      width: 100%;
+      border-radius: 8px;
+      padding: 12px 0;
+      box-shadow: 0 3px 15px rgba(5, 203, 196, 0.192);
+      text-align: center;
+      background-color: transparent;
+      margin-top: 15px;
+      color: #19212e;
+      font-size: 1.2rem;
+    }
+  }
+}

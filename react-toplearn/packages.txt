@@ -1,0 +1,10 @@
+jsonwebtoken
+react-redux-loading-bar
+lodash
+helmet
+toastify
+simple-react-validator
+redux-thunk
+react-lazy-image-load
+babel-plugin-transform-remove-console
+loadash uniqeBy

@@ -1,0 +1,2 @@
+for load less 
+copy webpack.config to node_modules\react-scripts\config 

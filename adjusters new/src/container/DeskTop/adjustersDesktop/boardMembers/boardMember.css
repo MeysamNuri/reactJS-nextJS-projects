@@ -1,0 +1,46 @@
+.buttonRight {
+  display: flex;
+}
+/* .arrowLeft {
+  background: #3499ff;
+  border-radius: 2px 0px 0px 2px;
+  display:flex;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  justify-content: center;
+} */
+
+/* .arrowLeft svg {
+  margin-top: 10px;
+} */
+.titlecol {
+  font-size: 12px;
+  line-height: 22px;
+  /* text-align: center; */
+  color: #7987a1;
+  font-weight: bolder;
+}
+.contentColumn{
+    font-size: 13px;
+    line-height: 22px;
+    /* text-align: center; */
+    /* color: #7987a1; */
+    display: block;
+
+}
+/* .textCenter{
+    text-align: center;
+}
+.contentDesktop .ant-table-cell-ellipsis .ant-table-column-title  {
+text-align: center;
+} */
+.lableCalendar {
+  display: flex;
+  align-items: center;
+}
+.lableCalendar label {
+  margin-left: 5px;
+}

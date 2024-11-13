@@ -1,0 +1,49 @@
+.search-notif-div {
+  position: absolute;
+  top: 1vh;
+  left: 95px;
+  width: 45px;
+  cursor: pointer;
+  
+  .search-notif-btn {
+    width: 46px;
+    height: 45px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .noti-number {
+    width: 18px;
+    height: 18px;
+    background-color: rgba(208, 51, 44, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.527);
+    color: #fff;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .search-notif-div .search-notif-btn {
+    margin-left: 22px;
+  }
+}
+@media (min-width: 1024px){
+  .search-notif-div {
+    left: 105px;
+  }
+}

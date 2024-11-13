@@ -1,0 +1,88 @@
+.container {
+    width:45%;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 20px;
+    direction: rtl;
+    background-color: #ffffff;
+    position: absolute;
+    top: 9%;
+    right: 30%;
+    
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.wrapperLogo {
+  margin: 0px 20px 35px 20px;
+  text-align: center;
+}
+
+.adjuster-logo {
+  width: 150px;
+  height: auto;
+}
+
+ .formInputNatCode{
+  width: 80%;
+} 
+
+.login {
+  width: 100%;
+  padding: 20px;
+  background: #fffcfc;
+  border: 1px solid rgba(217, 217, 217, 0.1);
+  box-sizing: border-box;
+  box-shadow: 3px 2px 4px rgb(118 93 160 / 25%);
+  border-radius: 2px;
+}
+/* .wrapperLogo {
+  padding: 20px;
+} */
+
+.wrapperLogin {
+  direction: rtl;
+  background: #3399fe;
+  display: flex;
+  /* border-bottom-left-radius: 100%;   */
+  background: url("../../../assets/images/background.svg") no-repeat top;
+  height: 100vh;
+
+}
+
+.wrapperForm {
+  width: 600px;
+  border-radius: 2px;
+  margin: auto;
+  margin-top: 7%;
+  margin-bottom: 12%;
+  text-align: center;
+  z-index: 10;
+  height: 474px;
+}
+
+/* initialObligation  */
+.inputText {
+  caret-color: transparent;
+}
+.initialObligation{
+  width: 100% !important;
+  font-size: 12px;
+  text-align: justify;
+  padding-top: 50px;
+}
+
+.initialObligation p{
+  line-height: 30px;
+}
+
+.atag{
+  color: #1363DF !important;
+}
+
+/* initialObligation  */

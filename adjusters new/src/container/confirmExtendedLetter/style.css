@@ -1,0 +1,16 @@
+.chargon-container{
+    margin: 40px;
+    direction: rtl;
+}
+.top-details{
+    background-color: #eee;
+    padding: 20px;
+
+}
+.top-details p{
+    font-weight: bolder;
+    font-size: 16px;
+}
+.top-details .ant-col{
+    padding-bottom: 20px;
+}

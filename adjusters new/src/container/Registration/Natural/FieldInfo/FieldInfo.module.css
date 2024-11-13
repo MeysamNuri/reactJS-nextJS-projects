@@ -1,0 +1,117 @@
+.ItemContainer {
+  margin: 20px 5rem;
+  text-align: right;
+}
+.PopoverCotainer {
+  display: flex;
+  justify-content: space-between;
+}
+.PopoverCotainerComponent {
+  display: flex;
+  justify-content: space-around;
+}
+.customUpload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.nextStep {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+.certificate {
+  background: #f3f6fa;
+  border: 1px solid rgba(217, 217, 217, 0.3);
+  box-sizing: border-box;
+  box-shadow: 3px 2px 4px rgba(118, 93, 160, 0.03);
+  border-radius: 2px;
+  /*   width: 330px; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.certificate label {
+  text-align: right;
+  margin-bottom: 5px;
+}
+.certificate button {
+  margin-top: 20px;
+}
+.formLableFeildInfo label {
+  width: 155px;
+}
+
+.subFeildCertificate {
+  background: #f5f5f5;
+  border: 1px solid #fafbfc;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: right;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.titleDocument {
+  display: flex;
+  justify-content: space-between;
+}
+.collapseCertificate {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #f5f5f5;
+  align-items: center;
+}
+.collapseCertificateComponent {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  background: #f5f5f5;
+  align-items: center;
+}
+
+.titleCollapse {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleCertificate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.inputCertificate {
+  padding: 5px;
+}
+.inputCertificate80Hour {
+  width: 30%;
+}
+
+.btnCertificate {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.buttonLeft {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.refusedDoc{
+  border: 2px solid red;
+  margin-top: 20px;
+  padding: 5px;
+}
+.approvedDoc{
+  margin-top: 20px;
+}

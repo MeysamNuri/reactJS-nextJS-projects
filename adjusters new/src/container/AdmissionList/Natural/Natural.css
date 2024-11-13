@@ -1,0 +1,299 @@
+.LegalCard .card .content ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+ul {
+  list-style: none;
+}
+
+.titleCard {
+  /* text-align: right; */
+  display: flex;
+  border-bottom: 1px solid #dfdfdf;
+  justify-content: space-between;
+  /* padding: 5px; */
+  /* align-items: center; */
+}
+
+/* .titleNatural{
+   justify-content: space-between; 
+} */
+
+h5 {
+  font-size: 12px !important;
+  line-height: 20px;
+  color: #7987a1 !important;
+}
+
+/* a {
+  color: #7987a1 !important;
+  
+} */
+
+ul {
+  padding: 0px;
+}
+.detailFile {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.detailFile li a {
+  display: block;
+}
+
+.viewDocument {
+  display: inline-flex;
+  /* justify-content: space-between; */
+  /* height: 71%; */
+}
+.footer {
+  border-top: 1px solid #f6ecf0;
+  padding: 8px;
+}
+.cardCartable {
+  background-color: #ffffff;
+  background: #ffffff;
+  border: 1px solid rgba(217, 217, 217, 0.3);
+  box-sizing: border-box;
+  /*   box-shadow: 3px 2px 4px rgba(118, 93, 160, 0.03); */
+  margin-bottom: 5px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+  border-radius: 2px;
+}
+
+.content ul li span {
+  font-weight: bold;
+  font-size: 12px !important;
+  line-height: 20px;
+  /* color: #000000; */
+}
+.detailFile {
+  padding: 16px;
+}
+.detailFile li:hover {
+  cursor: pointer;
+}
+.detailFile li span {
+  font-weight: bold;
+  font-size: 12px !important;
+  line-height: 20px;
+  color: #000000;
+}
+.detailFile li img {
+  display: block;
+  margin: auto;
+}
+.notConfirm {
+  background: #ff0000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.confirm {
+  background: #00ff19;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.notCheked {
+  background: #fac213;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.refer span {
+  margin-right: 10px;
+}
+.informationAdjuester h2 {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* .content ul {
+  display: flex;
+  justify-content: space-around;
+} */
+
+.allInterviewer {
+  display: none;
+}
+.allInterviewer .ant-select-selector {
+  border: none !important;
+}
+.removeInterviewer {
+  display: flex;
+}
+.removeInterviewer img {
+  margin-right: 5px !important;
+}
+.LegalCard:hover {
+  cursor: pointer;
+}
+
+.ant-modal-content {
+  margin-right: 13px;
+}
+.trackingCode {
+  font-size: 15px;
+  line-height: 14px;
+  color: #000000;
+  background-color: #f0f0f1;
+  padding: 5px;
+}
+.trackingCodeIndicator {
+  font-size: 15px;
+  line-height: 14px;
+  color: #000000;
+  padding: 5px;
+  border-left: 1px solid #ffffff;
+}
+
+.LegalCard .ant-select-selector {
+  border: none !important;
+}
+
+.text a {
+  display: flex;
+}
+/* .teaxt img {
+  padding-right: 5px;
+} */
+.text span,
+.trackingCode p {
+  font-size: 12px !important;
+  line-height: 20px;
+  color: #7987a1 !important;
+  padding-left: 12px;
+  margin-bottom: 0px;
+}
+.trackingCodeIndicator p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff !important;
+  padding-left: 12px;
+  margin-bottom: 0px;
+}
+
+.content {
+  padding: 13px;
+}
+.viewDocument svg {
+  cursor: pointer;
+}
+.paddingTop {
+  padding-top: 8px;
+}
+.text .ant-collapse-header {
+  font-size: 12px;
+  font-size: 12px !important;
+  line-height: 20px;
+  color: #7987a1 !important;
+  padding-left: 12px;
+}
+.ant-empty-description {
+  font-size: 12px;
+}
+.content .ant-col {
+  text-align: right !important;
+}
+.footer .ant-col {
+  text-align: right !important;
+}
+.ant-checkbox + span {
+  font-size: 12px;
+}
+
+/* .text .ant-collapse-rtl{
+  width: 270px;
+} */
+/* .text {
+  padding-right: 10px;
+} */
+.paddingColTitle {
+  padding-right: 10px;
+}
+.text .ant-empty-image svg {
+  width: 26px;
+}
+.text .ant-empty-image {
+  height: 50px;
+}
+.content span {
+  font-size: 12px;
+}
+
+.buttonModal {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.titleGray {
+  font-weight: bold;
+  font-size: 12px !important;
+  line-height: 20px;
+  color: #7987a1 !important;
+  font-weight: bold;
+}
+
+.titleGray label {
+  font-size: 12px !important;
+  line-height: 20px;
+  color: #7987a1 !important;
+  font-weight: bold;
+}
+
+.titleCartable {
+  display: flex;
+  align-items: center;
+}
+
+.licenseType {
+  padding-left: 10px;
+  font-size: 12px;
+  padding-right: 10px;
+  /* color: #F582A7; */
+  /* color: #FF7BA9 !important; */
+}
+/* .excel path:hover {
+ fill: #1bbf89;
+ stroke: #1bbf89;
+} */
+
+.userName {
+  padding-right: 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.notification {
+  position: relative;
+  top: 5px;
+  padding-right: 15px;
+}
+
+.popoverCustom .ant-popover-content {
+  width: 96%;
+}
+.popoverCustom .ant-popover-content .ant-popover-arrow {
+  left: 40% !important;
+}
+
+.filter-box form {
+  width: 97%;
+}
+
+.historyDocuments {
+  margin-top: 13px !important;
+  margin-bottom: 12px !important;
+}

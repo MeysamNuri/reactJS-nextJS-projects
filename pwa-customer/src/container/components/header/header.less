@@ -1,0 +1,82 @@
+.header {
+  background: -moz-linear-gradient(90deg, #01b897, #02856e);
+  background: -webkit-gradient(
+    linear,
+    right center,
+    left center,
+    from(#02856e),
+    to(#01b897)
+  );
+  background: linear-gradient(90deg, #01b897, #02856e);
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  flex-direction: column;
+  z-index: 1;
+  top: 0;
+  max-width: 1024px;
+
+  .icons {
+    width: calc(100% - 50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+    z-index: 1;
+  }
+}
+
+.searchbar {
+  height: 17vh;
+}
+
+.search {
+  width: calc(100% - 36px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: white;
+  z-index: 1;
+}
+
+.search_input {
+  width: calc(100% - 42px);
+  float: right;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding-right: 8px;
+  font-size: 16px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search_button {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 14px;
+    background-image: url("/assets/images/zoom-in.svg");
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  background-color: transparent;
+  width: 42px;
+  height: 100%;
+}
