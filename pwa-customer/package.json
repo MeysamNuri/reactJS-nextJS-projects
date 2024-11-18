@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@welldone-software/why-did-you-render": "^4.2.2",
     "axios": "^0.19.2",
-    "firebase": "^7.14.4",
+    "firebase": "^10.9.0",
     "google-map-react": "^1.1.6",
     "gsap": "^3.2.6",
     "less": "^3.11.1",
