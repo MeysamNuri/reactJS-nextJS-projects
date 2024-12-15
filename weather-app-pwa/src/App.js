@@ -9,8 +9,8 @@ const App = () => {
   const [error, setError] = useState(null);
 
   const fetchWeather = async () => {
-    const URL = "https://api.openweathermap.org/data/2.5/weather";
-    const API_KEY = "8a686fdf5719a4ff429b09015a2f20de";
+    const URL = "";
+    const API_KEY = "";
 
     if (!navigator.onLine) {
       setError("مثل اینکه آنلاین نیستی دلبندم 🧐");
@@ -68,7 +68,7 @@ const App = () => {
           <div className="info">
             <img
               className="city-icon"
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              src={``}
               alt={weather.weather[0].description}
             />
             <p>{weather.weather[0].description}</p>
