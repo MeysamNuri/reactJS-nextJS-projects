@@ -18,7 +18,7 @@ let myContact:  Contact  =  {
 
 type ContactFields  = keyof Contact;
 
-const field: ContactFields = "name";
+const field: ContactFields = "email";
 
 function getValue<T,U  extends keyof T>(source:  T,propertyName: U)
 {
